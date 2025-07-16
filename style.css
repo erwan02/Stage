@@ -1,0 +1,19 @@
+@import "normalize.css";
+
+
+*{ 
+    box-sizing : border-box;
+    margin :0;
+    padding :0;
+}
+
+html{
+    font-size: 18px;
+    /*la norme en general c 16px mais pour les malvoyants c 18px*/
+}
+
+body{
+    font-family: Arial, Verdana,Helvetica;
+    /* Ecriture recommandé pour les malvoyants*/
+    line-height: 1.6;
+}
