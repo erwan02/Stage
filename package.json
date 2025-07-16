@@ -1,0 +1,24 @@
+{
+  "name": "stage",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/erwan02/Stage#readme",
+  "bugs": {
+    "url": "https://github.com/erwan02/Stage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erwan02/Stage.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0"
+  }
+}
