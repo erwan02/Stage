@@ -1,4 +1,4 @@
-tsconfig : 
+
 {
   "compilerOptions": {
     "target": "ES2022",
