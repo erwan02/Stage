@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion Utilisateurs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="/public/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tableau de bord</title>
+  <link rel="stylesheet" href="/public/adminUserGestion.css"/>
+  <link rel="icon" href="/public/images/Logo1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="alignment">
-            <h1>Gestion Utilisateurs</h1>
-            <div class="header-buttons" role="group" aria-label="Actions principales">
-                <button type="button" >Profil</button>
-                <button type="button" >Déconnexion</button>
-            </div>
+        <img src="/public/images/Logo1.png" alt="">
+        <h1>Tableau de bord</h1>
+        <div class="Boutonorange">
+            <button class="bouton">Profil</button>
+            <button class="bouton">Déconnexion</button>
         </div>
     </header>
 
-    <nav aria-label="Menu principal">
-        <a href="#">Ateliers</a>
-        <a href="#">Historique</a>
-        <a href="#">Gestion utilisateurs</a>
-        <a href="#">Création d'atelier</a>
-        <a href="#" class="active" aria-current="page">Publication d'article</a>
-        <a href="#">Envoyer newsletter</a>
-        <a href="#">Tableau de bord</a>
-    </nav>
+    <nav class="navbar">
+  <div class="nav-container">
+    <ul class="nav-links">
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Actualités</a></li>
+      <li><a href="#">Ateliers</a></li>
+      <li><a href="#">Historique</a></li>
+      <li><a href="#">Utilisateurs</a></li>
+      <li><a href="#">Créer un atelier</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Newsletter</a></li>
+      <li><a class="active" href="#">Tableau de bord</a></li>
+    </ul>
+  </div>
+</nav>
 
     <div class="enTeteUsers">
         <div class="label">Nom :</div>
