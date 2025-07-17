@@ -1,142 +1,123 @@
-@import "normalize.css";
-
-
-*{ 
-    box-sizing : border-box;
-    margin :0;
-    padding :0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 18px;
-    /*la norme en general c 16px mais pour les malvoyants c 18px*/
-}
-
-body{
-    font-family: Arial, Verdana,Helvetica;
-    /* Ecriture recommandé pour les malvoyants*/
-    line-height: 1.6;
-}
-
-
-header, nav, main {
-    padding: 14px;
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #dbeafe, #3b82f6);
+  color: #1f2937;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 header {
-    background: #f4a300;
-    color: #000;
+  background-color: #ffffffcc;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.header-buttons {
-    margin-top: 0.5em;
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.header-buttons button {
-    margin-right: 0.5em;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    border: none;
-    background: #00aaff;
-    color: #fff;
-    cursor: pointer;
+.Boutonorange .bouton {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #F0A30A;
+  color: #1f2937;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.header-buttons button:last-child {
-    background: #c00;
-}
-
-.header-buttons button:focus,
-.header-buttons button:hover {
-    outline: 3px solid #000;
-    transform: scale(1.08); /* Agrandit le bouton de 8% */
-    transition: transform 0.2s;
+.Boutonorange .bouton:hover {
+  background-color: #F0A30A;
+  transform: translateY(-2px);
 }
 
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45em;
-    background: #ddd;
-    border-radius: 10px;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
 }
 
-nav a {
-    background: #999;
-    color: #000;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    border-radius: 10px;
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
 }
 
-nav a:focus,
-nav a:hover {
-    outline: 2px solid #000;
-    background: #555;
-    color: #fff;
+nav ul li {
+  margin: 5px 10px;
 }
 
-.active {
-    background: #000;
-    color: #fff;
+nav ul li a {
+  text-decoration: none;
+  color: #374151;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
-form {
-    background: #f4a300;
-    padding: 1em;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
+nav ul li a:hover {
+  background-color: #e5e7eb;
 }
 
-label {
-    display: block;
-    margin-top: 1em;
-    font-weight: bold;
+nav ul li a.active {
+  background-color: #3b82f6;
+  color: white;
 }
 
-input[type="text"],
-input[type="file"],
-textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-top: 0.5em;
-    border: 2px solid #000;
-    border-radius: 5px;
+
+main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
-textarea {
-    min-height: 200px;
+.BlocT1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  width: 100%;
 }
 
-.buttons {
-    margin-top: 1em;
-    display: flex;
-    gap: 1em;
+.Bloct1 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-button {
-    padding: 0.75em 1.5em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
+.Bloct1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
 }
 
-.submit-btn {
-    background: #00aaff;
-    color: #fff;
+.Bloct1 .nombre {
+  font-size: 36px;
+  font-weight: 700;
+  color: #3b82f6;
 }
 
-.cancel-btn {
-    background: #c00;
-    color: #fff;
-}
-
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 3px solid #000;
-    outline-offset: 2px;
+.Bloct1 .Titret {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #6b7280;
 }
