@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publication article</title>
+    <title>Envoi de la newsletter</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="styleNewLetterDeroulant.css">
 </head>
 <body>
     <div class="live-region" aria-live="polite" aria-atomic="true" id="announcements"></div>
-    
+   
     <header>
         <div class="header-container">
             <div class="header-title">
-                <h1>Publication d'article</h1>
+                <h1>Envoi de la newsletter</h1>
             </div>
             <div class="header-buttons" role="group" aria-label="Actions principales">
                 <button type="button" aria-label="Ouvrir la page de contact">Contact</button>
@@ -25,71 +25,80 @@
             </div>
         </div>
     </header>
-    
+   
     <nav aria-label="Menu principal">
+        <a href="#" aria-label="Accueil">Accueil</a>
+        <a href="#" aria-label="Actualités et blog">Actualités/Blog</a>
         <a href="#" aria-label="Voir les ateliers disponibles">Ateliers</a>
         <a href="#" aria-label="Consulter l'historique">Historique</a>
         <a href="#" aria-label="Gérer les utilisateurs">Gestion utilisateurs</a>
         <a href="#" aria-label="Créer un nouvel atelier">Création d'atelier</a>
-        <a href="#" class="active" aria-current="page" aria-label="Publication d'article (page actuelle)">Publication d'article</a>
-        <a href="#" aria-label="Envoyer la newsletter">Envoyer newsletter</a>
+        <a href="#" aria-label="Publication d'article">Publication d'article</a>
+        <a href="#" class="active" aria-current="page" aria-label="Envoyer newsletter (page actuelle)">Envoyer newsletter</a>
         <a href="#" aria-label="Voir le tableau de bord">Tableau de bord</a>
+        <a href="#" aria-label="À propos">À propos</a>
     </nav>
-    
+   
     <main>
         <form aria-labelledby="form-title" novalidate>
-            <h2 id="form-title">Formulaire de publication d'article</h2>
-            
-            <label for="titre">Titre <span aria-label="obligatoire">*</span>:</label>
-            <input type="text" id="titre" name="titre" aria-required="true" aria-describedby="titre-error" />
-            <div id="titre-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
-            
-            <label for="image">Image :</label>
-            <input type="file" id="image" name="image" accept="image/*" aria-describedby="image-help" />
-            <div id="image-help" class="sr-only">Sélectionnez une image au format JPG, PNG ou GIF</div>
-            
+            <h2 id="form-title">Formulaire d'envoi de newsletter</h2>
+           
+            <label for="objet">Objet <span aria-label="obligatoire">*</span>:</label>
+            <input type="text" id="objet" name="objet" aria-required="true" aria-describedby="objet-error" />
+            <div id="objet-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
+           
+            <label for="modele">Modèle :</label>
+            <select id="modele" name="modele" aria-describedby="modele-help">
+                <option value="">-- Aucun --</option>
+                <option value="modele1">Modèle 1 - Annonce d'évènement</option>
+                <option value="modele2">Modèle 2 - Résumé d'article</option>
+            </select>
+            <div id="modele-help" style="font-size: 0.9em; color: #666; margin-top: 0.25em;">
+                Sélectionnez un modèle prédéfini ou laissez vide pour créer un contenu personnalisé
+            </div>
+           
             <label for="contenu">Contenu <span aria-label="obligatoire">*</span>:</label>
-            <textarea id="contenu" name="contenu" aria-required="true" aria-describedby="contenu-error contenu-help"></textarea>
+            <textarea id="contenu" name="contenu" aria-required="true" aria-describedby="contenu-error contenu-help" placeholder="Saisissez le contenu de votre newsletter..."></textarea>
             <div id="contenu-help" style="font-size: 0.9em; color: #666; margin-top: 0.25em;">
-                Rédigez le contenu de votre article ici
+                Rédigez le contenu de votre newsletter ici
             </div>
             <div id="contenu-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
-            
+           
             <div class="buttons">
                 <button type="submit" class="submit-btn" aria-describedby="submit-help">
-                    Publier l'article
+                    Envoyé aux abonnés
                 </button>
                 <button type="reset" class="cancel-btn" aria-describedby="cancel-help">
-                    Annuler et vider le formulaire
+                    Annuler
                 </button>
             </div>
-            <div id="submit-help" class="sr-only">Publier l'article après vérification</div>
+            <div id="submit-help" class="sr-only">Envoyer la newsletter à tous les abonnés</div>
             <div id="cancel-help" class="sr-only">Annuler toutes les modifications</div>
         </form>
     </main>
-
+    
     <script>
         // Gestion du mode accessibilité
         const accessibilityToggle = document.getElementById('accessibilityToggle');
         const body = document.body;
         const announcements = document.getElementById('announcements');
-        
+       
         // Charger les préférences sauvegardées
         const isAccessibilityMode = JSON.parse(localStorage.getItem('accessibilityMode') || 'false');
         if (isAccessibilityMode) {
             enableAccessibilityMode();
         }
-        
+       
         accessibilityToggle.addEventListener('click', function() {
             const isActive = body.classList.contains('accessibility-mode');
-            
+           
             if (isActive) {
                 disableAccessibilityMode();
             } else {
                 enableAccessibilityMode();
             }
         });
-        
+       
         function enableAccessibilityMode() {
             body.classList.add('accessibility-mode');
             accessibilityToggle.classList.add('active');
@@ -97,7 +106,7 @@
             announcements.textContent = 'Mode accessibilité activé. Taille du texte augmentée, contrastes renforcés.';
             localStorage.setItem('accessibilityMode', 'true');
         }
-        
+       
         function disableAccessibilityMode() {
             body.classList.remove('accessibility-mode');
             accessibilityToggle.classList.remove('active');
@@ -105,25 +114,46 @@
             announcements.textContent = 'Mode accessibilité désactivé. Retour à l\'affichage normal.';
             localStorage.setItem('accessibilityMode', 'false');
         }
-        
+       
+        // Gestion des modèles
+        const modeleSelect = document.getElementById('modele');
+        const contenuTextarea = document.getElementById('contenu');
+       
+        modeleSelect.addEventListener('change', function() {
+            switch(this.value) {
+                case 'modele1':
+                    contenuTextarea.value = 'Cher(e) abonné(e),\n\nNous avons le plaisir de vous annoncer un évènement exceptionnel qui se déroulera prochainement.\n\nDate : \nLieu : \nHeure : \n\nN\'hésitez pas à vous inscrire dès maintenant.\n\nCordialement,\nL\'équipe';
+                    announcements.textContent = 'Modèle "Annonce d\'évènement" appliqué';
+                    break;
+                case 'modele2':
+                    contenuTextarea.value = 'Bonjour,\n\nDécouvrez notre dernier article qui traite d\'un sujet passionnant.\n\nTitre de l\'article : \n\nRésumé : \n\nLisez l\'article complet sur notre site web.\n\nBonne lecture !\nL\'équipe';
+                    announcements.textContent = 'Modèle "Résumé d\'article" appliqué';
+                    break;
+                default:
+                    if (contenuTextarea.value.includes('Cher(e) abonné(e)') || contenuTextarea.value.includes('Bonjour,')) {
+                        contenuTextarea.value = '';
+                        announcements.textContent = 'Modèle supprimé, contenu effacé';
+                    }
+            }
+        });
+       
         // Validation du formulaire
         const form = document.querySelector('form');
-        const titreInput = document.getElementById('titre');
-        const contenuTextarea = document.getElementById('contenu');
-        
+        const objetInput = document.getElementById('objet');
+       
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+           
             let isValid = true;
-            
-            // Validation du titre
-            if (!titreInput.value.trim()) {
-                showError('titre-error', 'Le titre est obligatoire');
+           
+            // Validation de l'objet
+            if (!objetInput.value.trim()) {
+                showError('objet-error', 'L\'objet est obligatoire');
                 isValid = false;
             } else {
-                hideError('titre-error');
+                hideError('objet-error');
             }
-            
+           
             // Validation du contenu
             if (!contenuTextarea.value.trim()) {
                 showError('contenu-error', 'Le contenu est obligatoire');
@@ -131,33 +161,38 @@
             } else {
                 hideError('contenu-error');
             }
-            
+           
             if (isValid) {
-                announcements.textContent = 'Article publié avec succès !';
-                alert('Article publié avec succès !');
+                if (confirm('Êtes-vous sûr de vouloir envoyer cette newsletter à tous les abonnés ?')) {
+                    announcements.textContent = 'Newsletter envoyée avec succès à tous les abonnés !';
+                    alert('Newsletter envoyée avec succès !');
+                    form.reset();
+                    hideError('objet-error');
+                    hideError('contenu-error');
+                }
             } else {
                 announcements.textContent = 'Veuillez corriger les erreurs dans le formulaire.';
             }
         });
-        
+       
         function showError(errorId, message) {
             const errorElement = document.getElementById(errorId);
             errorElement.textContent = message;
             errorElement.style.display = 'block';
         }
-        
+       
         function hideError(errorId) {
             const errorElement = document.getElementById(errorId);
             errorElement.style.display = 'none';
         }
-        
+       
         // Gestion du bouton reset
         form.addEventListener('reset', function() {
-            hideError('titre-error');
+            hideError('objet-error');
             hideError('contenu-error');
             announcements.textContent = 'Formulaire réinitialisé.';
         });
-        
+       
         // Navigation au clavier améliorée
         document.addEventListener('keydown', function(e) {
             // Raccourci clavier pour activer/désactiver le mode accessibilité (Alt + A)
