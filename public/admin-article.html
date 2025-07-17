@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publication article</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="../style.css">
 
 </head>
 <body>
+     <header>
+        <div class="alignment">
+            <h1>Publication d'article</h1>
+                <div class="header-buttons" role="group" aria-label="Actions principales">
+                    <button type="button">Contact</button>
+                    <button type="button" >Profil</button>
+                    <button type="button" >Déconnexion</button>
+                </div>
+        </div>
+    </header>
+    <nav aria-label="Menu principal">
+        <a href="#">Ateliers</a>
+        <a href="#">Historique</a>
+        <a href="#">Gestion utilisateurs</a>
+        <a href="#">Création d'atelier</a>
+        <a href="#" class="active" aria-current="page">Publication d'article</a>
+        <a href="#">Envoyer newsletter</a>
+        <a href="#">Tableau de bord</a>
+       
+    </nav>
+
+    <main>
+        <form aria-labelledby="form-title">
+            <h2 id="form-title">Formulaire de publication d'article</h2>
+
+            <label for="titre">Titre :</label>
+            <input type="text" id="titre" name="titre" aria-required="true" />
+
+            <label for="image">Image :</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+
+            <label for="contenu">Contenu :</label>
+            <textarea id="contenu" name="contenu" aria-required="true"></textarea>
+
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Publier</button>
+                <button type="reset" class="cancel-btn">Annuler</button>
+            </div>
+        </form>
+    </main>
     
 </body>
 </html>
