@@ -45,6 +45,23 @@ header h1 {
   transform: translateY(-2px);
 }
 
+.Boutonorange .boutonDeco {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  background-color: red;
+  color: #1f2937;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.Boutonorange .boutonDeco:hover {
+  background-color: red;
+  transform: translateY(-2px);
+}
+
 
 nav {
   background-color: #ffffffcc;
@@ -97,13 +114,13 @@ nav ul li a.active {
 
 .enTeteUsers textarea {
     width: 200px;
-    padding: 1em;
+    height: 30px; /* Nouvelle hauteur fixe */
+    padding: 4px 8px; /* Ajustement du padding */
     margin: 20px;
-    padding-top: 25px;
+    margin-bottom: 0;
     border: 2px solid #000;
     border-radius: 5px;
     resize: none;
-    min-height: 8vh;
 }
 
 .rangeeUser {
