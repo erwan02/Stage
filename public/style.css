@@ -194,6 +194,45 @@ nav a:hover {
     color: #fff;
 }
 
+.enTeteUsers {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.enTeteUsers .label {
+    font-weight: bold;
+    min-width: 14vw;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+.enTeteUsers textarea {
+    width: 200px;
+    padding: 0.5em;
+    margin: 20px;
+    margin-bottom: 0;
+    border: 2px solid #000;
+    border-radius: 5px;
+    resize: none;
+    min-height: 8vh;
+}
+
+.rangeeUser {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 10px;
+    padding: 20px;
+    background: #f4a300;
+    border-radius: 25px;
+    height: 70px;
+}
+
+.rangeeUser .dataUser {
+     min-width: 18vw;
+}
+
 .active {
     background: #000 !important;
     color: #fff !important;
