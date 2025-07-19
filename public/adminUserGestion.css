@@ -28,6 +28,7 @@ header h1 {
   margin-right: 49vw;
 }
 
+/* Btn Profil */
 .Boutonorange .bouton {
   margin-left: 10px;
   padding: 8px 14px;
@@ -105,6 +106,7 @@ nav ul li a.active {
     gap: 1em;
 }
 
+/* Nom Prenom... & Recherche */
 .enTeteUsers .label {
     font-weight: bold;
     min-width: 14vw;
@@ -112,10 +114,10 @@ nav ul li a.active {
     margin-bottom: 0;
 }
 
-.enTeteUsers textarea {
+.enTeteUsers #recherche {
     width: 200px;
-    height: 30px; /* Nouvelle hauteur fixe */
-    padding: 4px 8px; /* Ajustement du padding */
+    height: 30px;
+    padding: 4px 8px;
     margin: 20px;
     margin-bottom: 0;
     border: 2px solid #000;
@@ -123,6 +125,13 @@ nav ul li a.active {
     resize: none;
 }
 
+.loupe {
+  margin-top: 15px;
+  margin-right: 40px;
+  width: 30px;
+}
+
+/* Rangee utilisateur */
 .rangeeUser {
     display: flex;
     align-items: center;
@@ -132,6 +141,39 @@ nav ul li a.active {
     background: #ffffffcc;
     border-radius: 15px;
     height: 70px;
+}
+
+.rangeeUser .boutonDesactiver {
+  padding: 8px 14px;
+  border: none;
+  background-color: red;
+  color: #1f2937;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.rangeeUser .boutonDesactiver:hover {
+  
+  background-color: red;
+  transform: translateY(-2px);
+}
+
+.rangeeUser .boutonRole {
+  padding: 8px 14px;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.rangeeUser .boutonRole:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
 }
 
 .rangeeUser .dataUser {
