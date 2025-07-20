@@ -38,7 +38,7 @@ app.use(express.json());
 
 
 // Exemple de route pour la newsletter
-app.get('/newsletter-page', (req, res) => {
+app.get('/newsletter-page', (_req, res) => {
     res.render('newsletter-page', { title: "Envoi de la newsletter" });
 });
 
