@@ -3,7 +3,11 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "nodenext",
+<<<<<<< HEAD
     "lib": ["ES2022","dom"],
+=======
+    "lib": ["ES2022"],
+>>>>>>> 47e9b86588ee5d51e80ee3905643f82192818923
     "outDir": "./dist",
     "rootDir": "./src",
     "moduleResolution": "nodenext",
