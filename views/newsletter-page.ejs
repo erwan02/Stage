@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+    <!-- Normalize via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Ton CSS local -->
     <link rel="stylesheet" href="/styleNewLetterDeroulant.css">
 </head>
 <body>
@@ -12,18 +14,12 @@
     <%- include('partials/header') %>
     <%- include('partials/nav-bar') %>
 
- 
-    <script src="newsletter.js"></script>
-
- 
     <main>
         <form aria-labelledby="form-title" novalidate>
             <h2 id="form-title">Formulaire d'envoi de newsletter</h2>
-           
             <label for="objet">Objet <span aria-label="obligatoire">*</span>:</label>
             <input type="text" id="objet" name="objet" aria-required="true" aria-describedby="objet-error" />
             <div id="objet-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
-           
             <label for="modele">Modèle :</label>
             <select id="modele" name="modele" aria-describedby="modele-help">
                 <option value="">-- Aucun --</option>
@@ -33,17 +29,15 @@
             <div id="modele-help" style="font-size: 0.9em; color: #666; margin-top: 0.25em;">
                 Sélectionnez un modèle prédéfini ou laissez vide pour créer un contenu personnalisé
             </div>
-           
             <label for="contenu">Contenu <span aria-label="obligatoire">*</span>:</label>
             <textarea id="contenu" name="contenu" aria-required="true" aria-describedby="contenu-error contenu-help" placeholder="Saisissez le contenu de votre newsletter..."></textarea>
             <div id="contenu-help" style="font-size: 0.9em; color: #666; margin-top: 0.25em;">
                 Rédigez le contenu de votre newsletter ici
             </div>
             <div id="contenu-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
-           
             <div class="buttons">
                 <button type="submit" class="submit-btn" aria-describedby="submit-help">
-                    Envoyé aux abonnés
+                    Envoyer aux abonnés
                 </button>
                 <button type="reset" class="cancel-btn" aria-describedby="cancel-help">
                     Annuler
@@ -53,7 +47,7 @@
             <div id="cancel-help" class="sr-only">Annuler toutes les modifications</div>
         </form>
     </main>
-    
-    
+    <!-- Ton JS compilé (newsletter.js doit être dans /public) -->
+    <script src="/newsletter.js"></script>
 </body>
 </html>
