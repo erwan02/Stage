@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tableau de bord</title>
-  <link rel="stylesheet" href="/public/adminUserGestion.css"/>
-  <link rel="icon" href="/public/images/Logo1.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="/public/adminUserGestion.css"/>
+    <link rel="icon" href="/public/images/Logo1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="/public/images/Logo1.png" alt="">
+        <img src="/public/images/Logo1.png" alt="Logo du site">
         <h1>Tableau de bord</h1>
         <div class="Boutonorange">
             <button class="bouton">Profil</button>
-            <button class="bouton">Déconnexion</button>
+            <button class="boutonDeco">Déconnexion</button>
         </div>
     </header>
 
     <nav class="navbar">
-  <div class="nav-container">
-    <ul class="nav-links">
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Actualités</a></li>
-      <li><a href="#">Ateliers</a></li>
-      <li><a href="#">Historique</a></li>
-      <li><a href="#">Utilisateurs</a></li>
-      <li><a href="#">Créer un atelier</a></li>
-      <li><a href="#">Articles</a></li>
-      <li><a href="#">Newsletter</a></li>
-      <li><a class="active" href="#">Tableau de bord</a></li>
-    </ul>
-  </div>
-</nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Actualités</a></li>
+            <li><a href="#">Ateliers</a></li>
+            <li><a href="#">Historique</a></li>
+            <li><a href="#">Utilisateurs</a></li>
+            <li><a href="#">Créer un atelier</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a class="active" href="#">Tableau de bord</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="enTeteUsers">
         <div class="label">Nom :</div>
         <div class="label">Prénom :</div>
         <div class="label">E-mail :</div>
         <div class="label">Rôle :</div>
-        <textarea name="rechercheUser" id="recherche" placeholder="Rechercher..."></textarea>
+        <div class="ensembleRecherche">
+            <input type="text" id="recherche" placeholder="Rechercher..."></textarea>
+            <img class="loupe" src="/public/images/loupe.png" alt="Image d'une loupe">
+        </div>
     </div>
 
     <div class="listeUsers">
@@ -48,25 +51,37 @@
             <div class="dataUser">Tan</div>
             <div class="dataUser">blabla@gmail.com</div>
             <div class="dataUser">Membre</div>
+            <button class="boutonRole">Changer le rôle</button>
+            <button class="boutonDesactiver">Desactiver</button>
         </div>   
         <div class="rangeeUser">
             <div class="dataUser">Gae</div>
             <div class="dataUser">Tan</div>
             <div class="dataUser">blabla@gmail.com</div>
             <div class="dataUser">Membre</div>
+            <button class="boutonRole">Changer le rôle</button>
+            <button class="boutonDesactiver">Desactiver</button>
         </div>   
         <div class="rangeeUser">
             <div class="dataUser">Gae</div>
             <div class="dataUser">Tan</div>
             <div class="dataUser">blabla@gmail.com</div>
             <div class="dataUser">Membre</div>
+            <button class="boutonRole">Changer le rôle</button>
+            <button class="boutonDesactiver">Desactiver</button>
         </div>   
         <div class="rangeeUser">
             <div class="dataUser">Gae</div>
             <div class="dataUser">Tan</div>
             <div class="dataUser">blabla@gmail.com</div>
             <div class="dataUser">Membre</div>
+            <button class="boutonRole">Changer le rôle</button>
+            <button class="boutonDesactiver">Desactiver</button>
         </div>   
     </div>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
