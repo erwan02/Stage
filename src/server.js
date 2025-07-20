@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import ejsMate from "ejs-mate";
+
 
 const app = express();
 const port = 4545;
@@ -12,9 +12,7 @@ const __dirname = path.dirname(__filename);
 
 // Configuration du moteur de template EJS
 
-//But : Dit à Express d’utiliser ejs-mate comme moteur de rendu pour les fichiers .ejs.
 
-app.engine("ejs",ejsMate);
 //Utilité : Permet d’utiliser les layouts (<%- body %>)
 //  et les partials facilement dans EJS.
 
@@ -42,5 +40,5 @@ app.get('/newsletter-page', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`T'inquiete le serveur a bien demarré au ${port}`);
+    console.log(`T'inquiete le serveur a bien demarré : http://localhost:${port}/newsletter-page`);
 });
