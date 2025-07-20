@@ -1,7 +1,8 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import ejsMate from "ejs-mate";
+// @ts-ignore
+import ejsMate from "ejs-mate" 
 
 const app = express();
 const port = 4545;
