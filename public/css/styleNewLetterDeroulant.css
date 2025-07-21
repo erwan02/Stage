@@ -83,20 +83,33 @@ header {
     flex-wrap: wrap;
 }
 
+img{
+     width: 50px;     
+    height: auto;
+    margin-right: 10px;  
+}
+
 .header-title {
+     display: flex;
+    align-items: center;
     flex: 1;
-    min-width: 200px;
+    min-width: 180px;
 }
 
 .header-title h1 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     color: #000;
+}
+.logo{
+  width: 50px;      /* adapte la taille à ton besoin */
+    height: auto;
+    margin-right: 10px;  
 }
 
 .header-buttons {
     display: flex;
-    gap: 0.5em;
+    gap: 0.65em;
     align-items: center;
 }
 
@@ -188,31 +201,69 @@ header {
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 0;
-    background: #e0e0e0;
-    padding: 0;
-    border-bottom: 1px solid #ccc;
+    gap: 0.5110em;
+    background: #ddd;
+    border-radius: 10px;
+    padding: 14px;
 }
 
 nav a {
-    background: #f0f0f0;
+    background: #999;
     color: #000;
-    padding: 0.6em 0.8em;
+    padding: 0.5em 1em;
     text-decoration: none;
-    border-right: 1px solid #ccc;
+    border-radius: 10px;
     transition: all 0.2s;
-    font-size: 0.8em;
 }
 
 nav a:focus,
 nav a:hover {
     outline: 2px solid #000;
-    background: #d0d0d0;
-    color: #000;
+    background: #555;
+    color: #fff;
+}
+
+.enTeteUsers {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.enTeteUsers .label {
+    font-weight: bold;
+    min-width: 14vw;
+    margin: 30px;
+    margin-bottom: 0;
+}
+
+.enTeteUsers textarea {
+    width: 200px;
+    padding: 0.5em;
+    margin: 20px;
+    margin-bottom: 0;
+    border: 2px solid #000;
+    border-radius: 5px;
+    resize: none;
+    min-height: 8vh;
+}
+
+.rangeeUser {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 10px;
+    padding: 20px;
+    background: #f4a300;
+    border-radius: 25px;
+    height: 70px;
+}
+
+.rangeeUser .dataUser {
+     min-width: 18vw;
 }
 
 .active {
-    background: #333 !important;
+    background: #000 !important;
     color: #fff !important;
 }
 
@@ -310,6 +361,29 @@ select:focus {
     background: #ff3333;
 }
 
+
+/*================================
+    FOOTER
+/*=============================*/
+footer {
+    background: #222;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+.footer-content nav a {
+    color: #fff;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+.footer-content nav a:hover {
+    text-decoration: underline;
+}
+.footer-content .socials img {
+    width: 24px;
+    margin: 0 0.25em;
+    vertical-align: middle;
+}
 /* ===============================
    ACCESSIBILITÉ
    =============================== */
