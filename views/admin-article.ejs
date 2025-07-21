@@ -5,33 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publication article</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-     <link rel="stylesheet" href="../public/css/style.css">
+     <link rel="stylesheet" href="/css/admin-article.css">
 
 </head>
 <body>
-     <header class = "alignment">
-        
-            <h1>Publication d'article</h1>
-                <div class="header-buttons" role="group" aria-label="Actions principales">
-                    <button type="button">Contact</button>
-                    <button type="button" >Profil</button>
-                    <button type="button" >Déconnexion</button>
-        </div>
-    </header>
-    
-    <nav aria-label="Menu principal">
-        <a href="#" aria-label="Voir les ateliers disponibles">Ateliers</a>
-        <a href="#" aria-label="Consulter l'historique">Historique</a>
-        <a href="#" aria-label="Gérer les utilisateurs">Gestion utilisateurs</a>
-        <a href="#" aria-label="Créer un nouvel atelier">Création d'atelier</a>
-        <a href="#" class="active" aria-current="page" aria-label="Publication d'article (page actuelle)">Publication d'article</a>
-        <a href="#" aria-label="Envoyer la newsletter">Envoyer newsletter</a>
-        <a href="#" aria-label="Voir le tableau de bord">Tableau de bord</a>
-    </nav>
-    
+    <div class="live-region" aria-live="polite" aria-atomic="true" id="announcements"></div>
+    <%- include ("partials/header") %>
+    <%- include('partials/nav-bar') %>
     <main>
         <form aria-labelledby="form-title" novalidate>
-            <h2 id="form-title">Formulaire de publication d'article</h2>
+            <h1 id="form-title">Formulaire de publication d'article</h1>
             
             <label for="titre">Titre <span aria-label="obligatoire">*</span>:</label>
             <input type="text" id="titre" name="titre" aria-required="true" aria-describedby="titre-error" />
@@ -58,107 +41,8 @@
             </div>
             <div id="submit-help" class="sr-only">Publier l'article après vérification</div>
             <div id="cancel-help" class="sr-only">Annuler toutes les modifications</div>
-        </form>
-    </main>
-
-    <script>
-        // Gestion du mode accessibilité
-        const accessibilityToggle = document.getElementById('accessibilityToggle');
-        const body = document.body;
-        const announcements = document.getElementById('announcements');
-        
-        // Charger les préférences sauvegardées
-        const isAccessibilityMode = JSON.parse(localStorage.getItem('accessibilityMode') || 'false');
-        if (isAccessibilityMode) {
-            enableAccessibilityMode();
-        }
-        
-        accessibilityToggle.addEventListener('click', function() {
-            const isActive = body.classList.contains('accessibility-mode');
-            
-            if (isActive) {
-                disableAccessibilityMode();
-            } else {
-                enableAccessibilityMode();
-            }
-        });
-        
-        function enableAccessibilityMode() {
-            body.classList.add('accessibility-mode');
-            accessibilityToggle.classList.add('active');
-            accessibilityToggle.setAttribute('aria-pressed', 'true');
-            announcements.textContent = 'Mode accessibilité activé. Taille du texte augmentée, contrastes renforcés.';
-            localStorage.setItem('accessibilityMode', 'true');
-        }
-        
-        function disableAccessibilityMode() {
-            body.classList.remove('accessibility-mode');
-            accessibilityToggle.classList.remove('active');
-            accessibilityToggle.setAttribute('aria-pressed', 'false');
-            announcements.textContent = 'Mode accessibilité désactivé. Retour à l\'affichage normal.';
-            localStorage.setItem('accessibilityMode', 'false');
-        }
-        
-        // Validation du formulaire
-        const form = document.querySelector('form');
-        const titreInput = document.getElementById('titre');
-        const contenuTextarea = document.getElementById('contenu');
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            let isValid = true;
-            
-            // Validation du titre
-            if (!titreInput.value.trim()) {
-                showError('titre-error', 'Le titre est obligatoire');
-                isValid = false;
-            } else {
-                hideError('titre-error');
-            }
-            
-            // Validation du contenu
-            if (!contenuTextarea.value.trim()) {
-                showError('contenu-error', 'Le contenu est obligatoire');
-                isValid = false;
-            } else {
-                hideError('contenu-error');
-            }
-            
-            if (isValid) {
-                announcements.textContent = 'Article publié avec succès !';
-                alert('Article publié avec succès !');
-            } else {
-                announcements.textContent = 'Veuillez corriger les erreurs dans le formulaire.';
-            }
-        });
-        
-        function showError(errorId, message) {
-            const errorElement = document.getElementById(errorId);
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-        }
-        
-        function hideError(errorId) {
-            const errorElement = document.getElementById(errorId);
-            errorElement.style.display = 'none';
-        }
-        
-        // Gestion du bouton reset
-        form.addEventListener('reset', function() {
-            hideError('titre-error');
-            hideError('contenu-error');
-            announcements.textContent = 'Formulaire réinitialisé.';
-        });
-        
-        // Navigation au clavier améliorée
-        document.addEventListener('keydown', function(e) {
-            // Raccourci clavier pour activer/désactiver le mode accessibilité (Alt + A)
-            if (e.altKey && e.key === 'a') {
-                e.preventDefault();
-                accessibilityToggle.click();
-            }
-        });
-    </script>
+    <script src="/javascript/accessibility.js"></script>
+    <script src="/javascript/adminArticlePage.js"></script>
+    
 </body>
 </html>

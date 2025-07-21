@@ -23,11 +23,14 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.get('/index', (_req, res) => {
-    res.render('index', { message: "Welcome everybody, je vous présente Express , TypeScript et EJS", activePage: "dashboard" });
+    res.render('index', { message: "Welcome les copains bien venu a la page d'accueil" });
 });
 // Exemple de route pour la newsletter
 app.get('/newsletter-page', (_req, res) => {
     res.render('newsletter-page', { title: "Envoi de la newsletter" });
+});
+app.get('/admin-article', (_req, res) => {
+    res.render('admin-article', { title: "Publication d'article" });
 });
 app.listen(port, () => {
     console.log(`T'inquiete le serveur a bien demarré : http://localhost:${port}/index`);
