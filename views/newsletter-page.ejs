@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <!-- Normalize via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <!-- Ton CSS local -->
-    <link rel="stylesheet" href="/styleNewLetterDeroulant.css">
+    
+    <link rel="stylesheet" href="/css/styleNewLetterDeroulant.css">
 </head>
 <body>
     <div class="live-region" aria-live="polite" aria-atomic="true" id="announcements"></div>
@@ -47,7 +46,8 @@
             <div id="cancel-help" class="sr-only">Annuler toutes les modifications</div>
         </form>
     </main>
-    <!-- Ton JS compilé (newsletter.js doit être dans /public) -->
-    <script src="/newsletter.js"></script>
+
+  <%- include('partials/footer') %>
+    <script src="/javascript/newsletter.js"></script>
 </body>
 </html>
