@@ -1,28 +1,24 @@
 
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "nodenext",
-<<<<<<< HEAD
-    "lib": ["ES2022","dom"],
-=======
-    "lib": ["ES2022"],
->>>>>>> 47e9b86588ee5d51e80ee3905643f82192818923
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "moduleResolution": "nodenext",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "types": ["node"],
-    "allowSyntheticDefaultImports": true,
-    "incremental": true
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+    "target": "ES2022", // Version JavaScript générée (ici ES2022)
+    "module": "nodenext", // Système de modules utilisé (ici Node.js + ES modules)
+    "lib": ["ES2022"], // Bibliothèques de types incluses (ici ES2022, donc pas le DOM)
+    "outDir": "./dist", // Dossier de sortie des fichiers compilés
+    "rootDir": "./src", // Dossier racine des sources TypeScript
+    "moduleResolution": "nodenext", // Méthode de résolution des modules (spécifique Node.js)
+    "strict": true, // Active toutes les vérifications strictes de TypeScript
+    "esModuleInterop": true, // Permet l’importation de modules CommonJS via import ES6
+    "forceConsistentCasingInFileNames": true, // Force la casse cohérente dans les noms de fichiers
+    "skipLibCheck": true, // Ignore la vérification des types dans les fichiers de déclaration (*.d.ts)
+    "resolveJsonModule": true, // Permet d’importer des fichiers JSON comme modules
+    "noImplicitAny": true, // Erreur si un type "any" implicite est utilisé
+    "noUnusedLocals": true, // Erreur si des variables locales ne sont pas utilisées
+    "noUnusedParameters": true, // Erreur si des paramètres de fonction ne sont pas utilisés
+    "types": ["node"], // Charge uniquement les types Node.js (pas ceux du navigateur)
+    "allowSyntheticDefaultImports": true, // Permet les imports par défaut même si le module n’en a pas
+    "incremental": true // Active la compilation incrémentale (plus rapide)
+},
+"include": ["src/**/*.ts"], // Fichiers à inclure dans la compilation
+"exclude": ["node_modules", "dist", "**/*.spec.ts"] // Fichiers/dossiers à exclure.
 }
