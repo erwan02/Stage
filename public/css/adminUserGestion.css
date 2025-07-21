@@ -389,7 +389,8 @@ nav ul li a.active {
   }
   
   .Boutonorange .bouton,
-  .Boutonorange .boutonDeco {
+  .Boutonorange .boutonDeco
+  .Boutonorange .font-btn {
     padding: 10px 16px;
     font-size: 14px;
   }
@@ -436,7 +437,8 @@ nav ul li a.active {
   }
   
   .Boutonorange .bouton,
-  .Boutonorange .boutonDeco {
+  .Boutonorange .boutonDeco
+  .Boutonorange .font-btn {
     width: 100%;
     padding: 12px;
   }
@@ -450,3 +452,31 @@ nav ul li a.active {
     font-size: 14px;
   }
 }
+
+.font-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.font-btn:hover {
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
+.font-size-1 { font-size: 1em; }
+.font-size-2 { font-size: 1.2em; }
+.font-size-3 { font-size: 1.4em; }
+.font-size-4 { font-size: 1.6em; }
