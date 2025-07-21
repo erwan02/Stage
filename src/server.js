@@ -1,12 +1,8 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-<<<<<<< HEAD:src/server.js
 
-=======
-// @ts-ignore
-import ejsMate from "ejs-mate" 
->>>>>>> 47e9b86588ee5d51e80ee3905643f82192818923:src/server.ts
+
 
 const app = express();
 const port = 4545;
