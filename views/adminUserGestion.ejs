@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gestion des utilisateurs</title>
-    <link rel="stylesheet" href="/public/adminUserGestion.css"/>
-    <link rel="icon" href="/public/images/Logo1.png">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/adminUserGestion.css"/>
+    <link rel="icon" href="/images/Logo1.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <%- include('partials/header') %>
+    <%- include('partials/nav-bar') %>
+    <!-- <header>
         <img src="/public/images/Logo1.png" alt="Logo du site">
         <h1>Gestion des utilisateurs</h1>
         <div class="Boutonorange">
@@ -17,9 +19,9 @@
             <button class="bouton">Profil</button>
             <button class="boutonDeco">Déconnexion</button>
         </div>
-    </header>
+    </header> -->
 
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <div class="nav-container">
             <ul class="nav-links">
             <li><a href="#">Accueil</a></li>
@@ -34,7 +36,7 @@
             <li><a href="#">Tableau de bord</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="enTeteUsers">
         <div class="label">Nom :</div>
@@ -82,9 +84,7 @@
         </div>   
     </div>
 
-    <footer>
-
-    </footer>
-    <script src="../public/adminUserGestion.js"></script>
+    <%- include('partials/footer') %>
+    <script src="javascript/adminUserGestion.js"></script>
 </body>
 </html>

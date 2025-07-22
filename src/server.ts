@@ -29,6 +29,10 @@ app.get('/newsletter-page', (_req, res) => {
     res.render('newsletter-page', { title: "Envoi de la newsletter" });
 });
 
+app.get('/adminUserGestion', (_req, res) => {
+    res.render('adminUserGestion', { title: "Gestion des utilisateurs" });
+});
+
 app.get('/admin-article',(_req, res)=>{
     res.render('admin-article',{title : "Publication d'article"})
 })
