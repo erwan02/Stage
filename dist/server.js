@@ -16,7 +16,9 @@ app.set('views', path.join(__dirname, '../views'));
 //But : Indique à Express où trouver tes fichiers de vues.
 //Utilité : Toutes tes pages .ejs doivent être dans ce dossier.
 // Middleware pour servir les fichiers statiques (CSS, JS, images)
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../public'), {
+    maxAge: '180d'
+}));
 //But : Sert les fichiers statiques (CSS, JS, images) depuis le dossier public.
 // Utilité : Permet d’accéder à /style.css ou /newsletter.js dans tes pages.
 // Middleware pour parser les données des formulaires
