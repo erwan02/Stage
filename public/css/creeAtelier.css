@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to bottom right, #dbeafe, #3b82f6);
+  color: #1f2937;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffffcc;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Boutonorange .bouton {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #F0A30A;
+  color: #1f2937;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.Boutonorange .bouton:hover {
+  background-color: #F0A30A;
+  transform: translateY(-2px);
+}
+
+nav {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 5px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #374151;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #e5e7eb;
+}
+
+nav ul li a.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.BlocT1 {
+  max-width: 600px;
+  width: 100%;
+}
+
+.Bloct1 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Bloct1 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Bloct1 label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.Bloct1 input,
+.Bloct1 textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.Bloct1 button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #F0A30A;
+  color: #1f2937;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 16px;
+}
+
+.Bloct1 button:hover {
+  background-color: #F0A30A;
+  transform: translateY(-2px);
+}
+
+.Titret {
+  font-size: 16px;
+  color: #6b7280;
+}

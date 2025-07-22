@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tableau de bord</title>
-  <link rel="stylesheet" href="css/tableauDeBord.css"/>
+  <title>Créer un atelier</title>
+  <link rel="stylesheet" href="css/creeAtelier.css" />
   <link rel="icon" href="images/Logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header>
-    <h1>Tableau de bord</h1>
+    <h1>Créer un atelier</h1>
     <div class="Boutonorange">
       <button class="bouton">Profil</button>
       <button class="bouton">Déconnexion</button>
@@ -35,22 +35,26 @@
 
   <main>
     <section class="BlocT1">
-      <div class="Bloct1">
-        <p class="nombre">0</p>
-        <p class="Titret">Utilisateurs inscrits</p>
-      </div>
-      <div class="Bloct1">
-        <p class="nombre">0</p>
-        <p class="Titret">Ateliers à venir</p>
-      </div>
-      <div class="Bloct1">
-        <p class="nombre">0</p>
-        <p class="Titret">Inscriptions cette semaine</p>
-      </div>
-      <div class="Bloct1">
-        <p class="nombre">0</p>
-        <p class="Titret">Abonnés à la newsletter</p>
-      </div>
+      <form class="Bloct1" action="#" method="post">
+        <h2>Nouvel Atelier</h2>
+
+        <label for="titre">Titre de l’atelier :</label>
+        <input type="text" id="titre" name="titre" required>
+
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="heure">Heure :</label>
+        <input type="time" id="heure" name="heure" required>
+
+        <label for="lieu">Lieu :</label>
+        <input type="text" id="lieu" name="lieu" required>
+
+        <button type="submit">Créer l’atelier</button>
+      </form>
     </section>
   </main>
 

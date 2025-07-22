@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publier un article</title>
+  <link rel="stylesheet" href="css/publicationArticle.css" />
+  <link rel="icon" href="images/Logo1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Publier un article</h1>
+    <div class="Boutonorange">
+      <button class="bouton">Profil</button>
+      <button class="bouton">Déconnexion</button>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Ateliers</a></li>
+        <li><a href="#">Historique</a></li>
+        <li><a href="#">Utilisateurs</a></li>
+        <li><a href="creeAtelier.html">Créer un atelier</a></li>
+        <li><a class="active" href="publicationArticle.html">Articles</a></li>
+        <li><a href="newletter.html">Newsletter</a></li>
+        <li><a href="tableauDeBord.html">Tableau de bord</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="BlocA">
+      <form action="#" method="post" class="Article">
+        <label for="titre">Titre de l'article</label>
+        <input type="text" id="titre" name="titre" placeholder="Titre de l'article" required>
+
+        <label for="auteur">Auteur</label>
+        <input type="text" id="auteur" name="auteur" placeholder="Nom de l'auteur" required>
+
+        <label for="contenu">Contenu</label>
+        <textarea id="contenu" name="contenu" placeholder="Rédigez votre article ici..." rows="10" required></textarea>
+
+        <label for="image">Image de couverture (URL ou fichier)</label>
+        <input type="text" id="image" name="image" placeholder="URL de l'image (facultatif)">
+
+        <button type="submit" class="bouton">Publier</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
