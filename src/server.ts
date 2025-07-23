@@ -25,7 +25,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/index', (_req, res) => {
-    res.render('index', {message : "Welcome les copains bien venu a la page d'accueil"})})
+    res.render('index', { message: "Welcome les copains, bienvenue à la page d'accueil" });
+});
 
 app.get('/newsletter-page', (_req, res) => {
     res.render('newsletter-page', { title: "Envoi de la newsletter" });

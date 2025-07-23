@@ -11,44 +11,16 @@
 <body>
     <%- include('partials/header') %>
     <%- include('partials/nav-bar') %>
-    <!-- <header>
-        <img src="/public/images/Logo1.png" alt="Logo du site">
-        <h1>Gestion des utilisateurs</h1>
-        <div class="Boutonorange">
-            <button class="font-btn" onclick="increaseFontSize()" title="Augmenter la taille du texte">A+</button>
-            <button class="bouton">Profil</button>
-            <button class="boutonDeco">Déconnexion</button>
-        </div>
-    </header> -->
-
-    <!-- <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-links">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Actualités</a></li>
-            <li><a href="#">Ateliers</a></li>
-            <li><a href="#">Historique</a></li>
-            <li><a class="active" href="#">Gestion utilisateurs</a></li>
-            <li><a href="#">Gestion ateliers</a></li>
-            <li><a href="#">Créer un atelier</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#">Tableau de bord</a></li>
-            </ul>
-        </div>
-    </nav> -->
-
     <div class="enTeteUsers">
         <div class="label">Nom :</div>
         <div class="label">Prénom :</div>
         <div class="label">E-mail :</div>
         <div class="label">Rôle :</div>
         <div class="ensembleRecherche">
-            <input type="text" id="recherche" placeholder="Rechercher..."></textarea>
-            <img class="loupe" src="/public/images/loupe.png" alt="Image d'une loupe">
+            <input type="text" id="recherche" placeholder="Rechercher...">
+            <img class="loupe" src="/images/loupe.png" alt="Image d'une loupe">
         </div>
     </div>
-
     <div class="listeUsers">
         <div class="rangeeUser">
             <div class="dataUser">Gae</div>
@@ -83,8 +55,7 @@
             <button class="boutonDesactiver">Desactiver</button>
         </div>   
     </div>
-
     <%- include('partials/footer') %>
-    <script src="javascript/adminUserGestion.js"></script>
+    <script src="/javascript/adminUserGestion.js"></script>
 </body>
 </html>

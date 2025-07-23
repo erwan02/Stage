@@ -19,6 +19,6 @@
     "allowSyntheticDefaultImports": true, // Permet les imports par défaut même si le module n’en a pas
     "incremental": true // Active la compilation incrémentale (plus rapide)
 },
-"include": ["src/**/*.ts", "src/server.js"], // Fichiers à inclure dans la compilation
+"include": ["src/**/*.ts", "src/server."], // Fichiers à inclure dans la compilation
 "exclude": ["node_modules", "dist", "**/*.spec.ts"] // Fichiers/dossiers à exclure.
 }
