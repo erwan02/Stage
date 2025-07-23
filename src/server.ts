@@ -1,3 +1,4 @@
+
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -40,6 +41,10 @@ app.get('/adminAtelierGestion', (_req, res) => {
     res.render('adminAtelierGestion', { title: "Gestion des ateliers" });
 });
 
+// Route pour la page adminModifAtelier
+app.get('/adminModifAtelier', (_req, res) => {
+    res.render('adminModifAtelier', { title: "Modification d'atelier" });
+});
 app.get('/admin-article',(_req, res)=>{
     res.render('admin-article',{title : "Publication d'article"})
 })

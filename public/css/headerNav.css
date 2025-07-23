@@ -66,10 +66,11 @@ body {
    HEADER
    =============================== */
 header {
-background: linear-gradient(135deg, #4db8ff 0%, #0057b8 100%);
+    background: linear-gradient(135deg, #4db8ff 0%, #0057b8 100%);
     color: #000;
     padding: 14px;
     position: relative;
+    border-bottom: 2px solid #cc7a00;
 }
 
 .header-container {
@@ -79,103 +80,59 @@ background: linear-gradient(135deg, #4db8ff 0%, #0057b8 100%);
     flex-wrap: wrap;
 }
 
+img{
+     width: 50px;     
+    height: auto;
+    margin-right: 10px;  
+}
+
 .header-title {
-  display: flex;
+     display: flex;
     align-items: center;
     flex: 1;
     min-width: 180px;
 }
+
 .header-title h1 {
     font-size: 1.3em;
     font-weight: bold;
     color: #000;
 }
-
 .logo{
   width: 50px;     
     height: auto;
     margin-right: 10px;  
 }
+
 .header-buttons {
     display: flex;
-    gap: 0.5em;
+    gap: 0.65em;
     align-items: center;
 }
 
 .header-buttons button {
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    border: none;
-    background: #00aaff;
+    padding: 0.4em 0.8em;
+    border-radius: 3px;
+    border: 1px solid #333;
+    background: #4db8ff;
     color: #fff;
     cursor: pointer;
     transition: all 0.2s;
+    font-size: 0.8em;
 }
 
-.header-buttons button:last-child {
-    background: #c00;
+.header-buttons button:nth-child(2) {
+    background: #66b3ff;
+}
+
+.header-buttons button:nth-child(3) {
+    background: #ff4444;
 }
 
 .header-buttons button:focus,
 .header-buttons button:hover {
-    outline: 3px solid #000;
-    transform: scale(1.08);
-}
-
-/* ===============================
-   BOUTON ACCESSIBILITÉ
-   =============================== */
-.accessibility-toggle {
-    background: #4CAF50 !important;
-    border: 2px solid #000 !important;
-    border-radius: 50% !important;
-    width: 50px !important;
-    height: 50px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 1.5em !important;
-    margin-left: 1em !important;
-    position: relative !important;
-}
-
-.accessibility-toggle:hover,
-.accessibility-toggle:focus {
-    background: #45a049 !important;
-    transform: scale(1.1) !important;
-}
-
-.accessibility-toggle.active {
-    background: #ff5722 !important;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-/* Tooltip pour le bouton accessibilité */
-.accessibility-toggle::after {
-    content: "Mode accessibilité";
-    position: absolute;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.7em;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-}
-
-.accessibility-toggle:hover::after {
-    opacity: 1;
-    visibility: visible;
+    outline: 2px solid #000;
+    transform: scale(1.05);
 }
 
 /* ===============================
