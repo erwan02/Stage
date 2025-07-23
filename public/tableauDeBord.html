@@ -4,18 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tableau de bord</title>
+
   <link rel="stylesheet" href="css/tableauDeBord.css"/>
   <link rel="icon" href="images/Logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Seulement si pas déjà présent dans ton CSS */
+    .sr-only {
+      position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+      clip:rect(0 0 0 0);white-space:nowrap;border:0;
+    }
+    .zoom-controls { display:inline-flex; gap:6px; margin-left:10px; }
+  </style>
 </head>
 <body>
+  <div id="announcements" aria-live="polite" class="sr-only"></div>
   <header>
     <h1>Tableau de bord</h1>
+
+
+
+    <div class="zoom-controls" role="group" aria-label="Contrôle du zoom texte">
+      <button id="zoomIn" class="bouton" aria-label="Augmenter la taille du texte">A+</button>
+      <button id="zoomReset" class="bouton" aria-label="Remettre la taille du texte par défaut">A=</button>
+      <button id="zoomOut" class="bouton" aria-label="Diminuer la taille du texte">A-</button>
+    </div>
+
     <div class="Boutonorange">
       <button class="bouton">Profil</button>
       <button class="bouton">Déconnexion</button>
     </div>
   </header>
+<<<<<<< HEAD
 <nav class="navbar">
   <div class="nav-container">
     <ul class="nav-links">
@@ -30,6 +50,24 @@
     </ul>
   </div>
 </nav>
+=======
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Ateliers</a></li>
+        <li><a href="#">Historique</a></li>
+        <li><a href="#">Utilisateurs</a></li>
+        <li><a href="creeAtelier.html">Créer un atelier</a></li>
+        <li><a href="publicationArticle.html">Articles</a></li>
+        <li><a href="newletter.html">Newsletter</a></li>
+        <li><a class="active" href="tableauDeBord.html">Tableau de bord</a></li>
+      </ul>
+    </div>
+  </nav>
+
+>>>>>>> a94e528a45ff3fcfd8180452cbd11938da4907d1
   <main>
     <section class="BlocT1">
       <div class="Bloct1">
@@ -50,5 +88,10 @@
       </div>
     </section>
   </main>
+<<<<<<< HEAD
+=======
+
+  <script src="javascript/accessibility.js" defer></script>
+>>>>>>> a94e528a45ff3fcfd8180452cbd11938da4907d1
 </body>
 </html>

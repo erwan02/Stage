@@ -74,3 +74,11 @@ function hideError(errorId) {
         errorElement.style.display = 'none';
     }
 }
+
+// Redirection vers /index quand on clique sur le logo
+document.querySelectorAll('.logo').forEach(logo => {
+  logo.style.cursor = 'pointer';
+  logo.addEventListener('click', () => {
+    window.location.href = '/index';
+  });
+});

@@ -6,7 +6,6 @@
 
 html {
     font-size: 18px;
-    /* la norme en général c'est 16px mais pour les malvoyants c'est 18px */
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -24,6 +23,10 @@ body {
 .accessibility-mode {
     font-size: 22px !important;
     line-height: 2 !important;
+}
+
+.accessibility-mode main, .accessibility-mode main * {
+    font-size: 1.3em !important;
 }
 
 .accessibility-mode * {
@@ -216,6 +219,13 @@ nav a {
     transition: all 0.2s;
 }
 
+nav a.nav-grow {
+    transform: scale(1.25);
+    z-index: 2;
+    box-shadow: 0 0 8px #0074d9;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
 nav a:focus,
 nav a:hover {
     outline: 2px solid #000;
@@ -253,7 +263,7 @@ nav a:hover {
     gap: 1em;
     margin: 10px;
     padding: 20px;
-    background: #f4a300;
+    background: linear-gradient(90deg, #f4a300 0%, #ffd700 100%);
     border-radius: 25px;
     height: 70px;
 }
@@ -366,24 +376,25 @@ select:focus {
     FOOTER
 /*=============================*/
 footer {
-    background: #222;
+    background: linear-gradient(90deg, #004080 0%, #0074d9 100%);
     color: #fff;
-    padding: 1em 0;
     text-align: center;
+    padding: 32px 0 24px 0;
+    width: 100%;
+    margin-top: 40px;
 }
-.footer-content nav a {
-    color: #fff;
-    margin: 0 0.5em;
-    text-decoration: none;
+
+footer p {
+    font-size: 1.1em;
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
 }
-.footer-content nav a:hover {
-    text-decoration: underline;
+
+.accessibility-mode footer p {
+    font-size: 1.3em !important;
+    font-weight: bold;
 }
-.footer-content .socials img {
-    width: 24px;
-    margin: 0 0.25em;
-    vertical-align: middle;
-}
+
 /* ===============================
    ACCESSIBILITÉ
    =============================== */

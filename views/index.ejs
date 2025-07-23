@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,38 +10,10 @@
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="header-title">
-                <img src="/images/Logo1.png" alt="Logo application" class="logo">
-                <h1>Tableau de bord</h1>
-            </div>
-        </div>
-    </header>
-    <main class="index-main">
-        <nav aria-label="Navigation principale">
-            <a href="/newsletter-page" class="active">Envoi d'une newsletter</a>
-            <a href="/admin-article">Publication d'article</a>
-            <a href="/adminUserGestion">Gestion des utilisateurs</a>
-        </nav>
-        <% if (message) { %>
-            <div role="alert" style="margin-bottom:1em;"> <%= message %> </div>
-        <% } %>
-        <section>
-            <p>Bienvenue sur le tableau de bord. Sélectionnez une action ci-dessus.</p>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            <nav aria-label="Liens pied de page">
-                <a href="/newsletter-page">Newsletter</a>
-                <a href="/admin-article">Articles</a>
-                <a href="/adminUserGestion">Utilisateurs</a>
-            </nav>
-            <div class="socials">
-                <img src="/images/Logo1.png" alt="Logo application">
-            </div>
-        </div>
-    </footer>
+   <ul>
+            <li style="margin:1em 0;"><a href="/newsletter-page" class="dashboard-link">Envoi d'une newsletter</a></li>
+            <li style="margin:1em 0;"><a href="/admin-article" class="dashboard-link">Publication d'article</a></li>
+            <li style="margin:1em 0;"><a href="/adminUserGestion" class="dashboard-link">Gestion des utilisateurs</a></li>
+       
 </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/adminAtelierGestion.css"/>
+    <link rel="icon" href="/images/Logo1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/headerNav.css">
+    <link rel="stylesheet" href="/css/headerNav.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/nav-bar') %>
+   
+
+    <div class="enteteAtelier">
+        <div class="ensembleRecherche">
+            <div class="rechercherPar">Rechercher par</div>
+            <input type="text" id="recherche" placeholder="Rechercher..."></textarea>
+            <img class="loupe" src="/public/images/loupe.png" alt="Image d'une loupe">
+        </div>
+    </div>
+
+    <div class="listeAtelier">
+        <div class="rangeeAtelier">
+            <div class="infoAtelier">
+                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                <div class="dataAtelier">Titre de l'atelier</div>
+                <div class="dataAtelier">Date et lieu ou lien</div>
+                <div class="dataAtelier">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+        
+        <div class="rangeeAtelier">
+            <div class="infoAtelier">
+                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                <div class="dataAtelier">Titre de l'atelier</div>
+                <div class="dataAtelier">Date et lieu ou lien</div>
+                <div class="dataAtelier">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+        
+        <div class="rangeeAtelier">
+            <div class="infoAtelier">
+                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                <div class="dataAtelier">Titre de l'atelier</div>
+                <div class="dataAtelier">Date et lieu ou lien</div>
+                <div class="dataAtelier">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+        
+        <div class="rangeeAtelier">
+            <div class="infoAtelier">
+                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                <div class="dataAtelier">Titre de l'atelier</div>
+                <div class="dataAtelier">Date et lieu ou lien</div>
+                <div class="dataAtelier">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+    </div>
+    <%- include('partials/footer') %>
+  <script src="javascript/accessibility.js"></script>
+</body>
+</html>

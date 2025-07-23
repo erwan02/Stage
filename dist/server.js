@@ -26,6 +26,9 @@ app.get('/newsletter-page', (_req, res) => {
 app.get('/adminUserGestion', (_req, res) => {
     res.render('adminUserGestion', { title: "Gestion des utilisateurs" });
 });
+app.get('/adminAtelierGestion', (_req, res) => {
+    res.render('adminAtelierGestion', { title: "Gestion des ateliers" });
+});
 app.get('/admin-article', (_req, res) => {
     res.render('admin-article', { title: "Publication d'article" });
 });
