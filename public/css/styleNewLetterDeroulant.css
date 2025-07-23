@@ -68,170 +68,8 @@ body {
     box-shadow: 0 0 0 4px #ff0000, 0 0 0 8px #ffffff !important;
 }
 
-/* ===============================
-   HEADER
-   =============================== */
-header {
-    background: linear-gradient(135deg, #4db8ff 0%, #0057b8 100%);
-    color: #000;
-    padding: 14px;
-    position: relative;
-    border-bottom: 2px solid #cc7a00;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-img{
-     width: 50px;     
-    height: auto;
-    margin-right: 10px;  
-}
-
-.header-title {
-     display: flex;
-    align-items: center;
-    flex: 1;
-    min-width: 180px;
-}
-
-.header-title h1 {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #000;
-}
-.logo{
-  width: 50px;     
-    height: auto;
-    margin-right: 10px;  
-}
-
-.header-buttons {
-    display: flex;
-    gap: 0.65em;
-    align-items: center;
-}
-
-.header-buttons button {
-    padding: 0.4em 0.8em;
-    border-radius: 3px;
-    border: 1px solid #333;
-    background: #4db8ff;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 0.8em;
-}
-
-.header-buttons button:nth-child(2) {
-    background: #66b3ff;
-}
-
-.header-buttons button:nth-child(3) {
-    background: #ff4444;
-}
-
-.header-buttons button:focus,
-.header-buttons button:hover {
-    outline: 2px solid #000;
-    transform: scale(1.05);
-}
-
-/* ===============================
-   BOUTON ACCESSIBILITÉ
-   =============================== */
-.accessibility-toggle {
-    background: #4CAF50 !important;
-    border: 2px solid #000 !important;
-    border-radius: 5px !important;
-    width: 40px !important;
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 1.2em !important;
-    margin-left: 1em !important;
-    position: relative !important;
-    padding: 0 !important;
-}
-
-.accessibility-toggle:hover,
-.accessibility-toggle:focus {
-    background: #45a049 !important;
-    transform: scale(1.1) !important;
-}
-
-.accessibility-toggle.active {
-    background: #ff5722 !important;
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-/* Tooltip pour le bouton accessibilité */
-.accessibility-toggle::after {
-    content: "Mode accessibilité";
-    position: absolute;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.6em;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-}
-
-.accessibility-toggle:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ===============================
-   NAVIGATION
-   =============================== */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5110em;
-    background: #ddd;
-    border-radius: 10px;
-    padding: 14px;
-}
-
-nav a {
-    background: #999;
-    color: #000;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: all 0.2s;
-}
-
-nav a.nav-grow {
-    transform: scale(1.25);
-    z-index: 2;
-    box-shadow: 0 0 8px #0074d9;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-nav a:focus,
-nav a:hover {
-    outline: 2px solid #000;
-    background: #555;
-    color: #fff;
-}
+/* SUPPRIMÉ : Les styles header, nav, .header-container, img, .header-title, .header-buttons
+   qui entraient en conflit avec headerNav.css */
 
 .enTeteUsers {
     display: flex;
@@ -371,7 +209,6 @@ select:focus {
     background: #ff3333;
 }
 
-
 /*================================
     FOOTER
 /*=============================*/
@@ -433,27 +270,6 @@ footer p {
    RESPONSIVE
    =============================== */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .header-buttons {
-        justify-content: center;
-        width: 100%;
-    }
-
-    nav {
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    nav a {
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-        text-align: center;
-    }
-
     .buttons {
         flex-direction: column;
     }
