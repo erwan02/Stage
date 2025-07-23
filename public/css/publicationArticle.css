@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #dbeafe, #3b82f6);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ffffffcc;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Boutonorange .bouton {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  background-color: #F0A30A;
+  color: #1f2937;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.Boutonorange .bouton:hover {
+  background-color: #d98c00;
+  transform: translateY(-2px);
+}
+
+nav {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 5px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #374151;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #e5e7eb;
+}
+
+nav ul li a.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.BlocA {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  width: 100%;
+}
+
+.Article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Article label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.Article input,
+.Article textarea {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.Article input:focus,
+.Article textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.Article .bouton {
+  align-self: flex-start;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.Article .bouton:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}

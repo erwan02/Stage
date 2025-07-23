@@ -1,0 +1,87 @@
+/* ===============================
+   MISE EN PAGE INDEX (TABLEAU DE BORD)
+   =============================== */
+body {
+    background: #f4f8fb;
+}
+.index-main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 2em;
+    background: #fffbe6;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.index-main nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+.index-main nav a {
+    background: #4db8ff;
+    color: #fff;
+    padding: 0.7em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.index-main nav a.active,
+.index-main nav a:focus,
+.index-main nav a:hover {
+    background: #0057b8;
+    color: #fffbe6;
+    outline: 2px solid #0057b8;
+    transform: scale(1.05);
+}
+.index-main section {
+    margin-top: 2em;
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+}
+.index-main [role="alert"] {
+    background: #ffe6e6;
+    color: #b80000;
+    border: 1px solid #b80000;
+    border-radius: 6px;
+    padding: 0.7em 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.index-main .logo {
+    width: 60px;
+    height: auto;
+    margin-right: 12px;
+}
+.index-main h1 {
+    font-size: 2em;
+    color: #0057b8;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+.index-main footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    background: none;
+}
+.index-main .footer-content nav a {
+    color: #0057b8;
+    font-size: 1em;
+    margin: 0 0.5em;
+}
+.index-main .footer-content nav a:hover {
+    text-decoration: underline;
+    color: #ff4444;
+}
+.index-main .socials img {
+    width: 32px;
+    margin: 0 0.25em;
+    vertical-align: middle;
+}
