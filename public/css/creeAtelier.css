@@ -33,29 +33,6 @@ body {
   transform: translateY(-2px);
 }
 
-.zoom-controls {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.zoom-controls .bouton {
-  padding: 8px 14px;
-  border: none;
-  background-color: #ffb700;
-  color: #1f2937;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.zoom-controls .bouton:hover {
-  background-color: #F0A30A;
-  transform: translateY(-2px);
-}
 
 main {
   padding: 40px 20px;
