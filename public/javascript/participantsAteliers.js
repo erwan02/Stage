@@ -28,8 +28,17 @@ boutonParticipants.addEventListener('click', function() {
     `;
     
     contenu.innerHTML = `
-        <h2>Participants</h2>
-        <p>Contenu de ta fenêtre ici...</p>
+        <h2>Atelier Presentation</h2>
+        <h3>Participants :</h3>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
+        <p>Nom Prenom mail</p>
         <button id="fermerModal">Fermer</button>
     `;
     
