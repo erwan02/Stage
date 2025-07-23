@@ -44,6 +44,7 @@ app.get('/admin-article',(_req, res)=>{
     res.render('admin-article',{title : "Publication d'article"})
 })
 
+
 app.listen(port, () => {
     console.log(`T'inquiete le serveur a bien demarré : http://localhost:${port}/index`);
 });
