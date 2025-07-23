@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tableau de bord</title>
+    <title><%= title %></title>
   <link rel="stylesheet" href="css/tableauDeBord.css"/>
   <link rel="icon" href="images/Logo1.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,6 +17,9 @@
   </style>
 </head>
 <body>
+      <div class="live-region" aria-live="polite" aria-atomic="true" id="announcements"></div>
+    <%- include('partials/header') %>
+    <%- include('partials/nav-bar') %>
   <div id="announcements" aria-live="polite" class="sr-only"></div>
   <header>
     <h1>Tableau de bord</h1>
@@ -40,10 +43,10 @@
         <li><a href="#">Ateliers</a></li>
         <li><a href="#">Historique</a></li>
         <li><a href="#">Utilisateurs</a></li>
-        <li><a href="creeAtelier.html">Créer un atelier</a></li>
-        <li><a href="publicationArticle.html">Articles</a></li>
-        <li><a href="newletter.html">Newsletter</a></li>
-        <li><a class="active" href="tableauDeBord.html">Tableau de bord</a></li>
+        <li><a href="creeAtelier.ejs">Créer un atelier</a></li>
+        <li><a href="publicationArticle.ejs">Articles</a></li>
+        <li><a href="newsletter-page.ejs">Newsletter</a></li>
+        <li><a class="active" href="tableauDeBord.ejs">Tableau de bord</a></li>
       </ul>
     </div>
   </nav>
@@ -70,7 +73,7 @@
     </section>
   </main>
 
-
+  <%- include('partials/footer') %>
   <script src="javascript/accessibility.js" defer></script>
 
 </body>
