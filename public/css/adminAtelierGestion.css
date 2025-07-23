@@ -196,7 +196,7 @@ header img {
   transform: translateY(-2px);
 }
 
-.rangeeAtelier #boutonParticipants {
+.rangeeAtelier .boutonParticipants {
   padding: 8px 16px;
   border: none;
   background-color: #3b82f6;
@@ -210,7 +210,7 @@ header img {
   min-width: 100px;
 }
 
-.rangeeAtelier #boutonParticipants:hover {
+.rangeeAtelier .boutonParticipants:hover {
   background-color: #2563eb;
   transform: translateY(-2px);
 }
@@ -415,7 +415,7 @@ header img {
   }
   
   .rangeeAtelier .boutonEditer,
-  .rangeeAtelier #boutonParticipants,
+  .rangeeAtelier .boutonParticipants,
   .rangeeAtelier .boutonSupprimer {
     width: 100%;
     min-width: auto;

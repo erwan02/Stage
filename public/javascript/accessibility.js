@@ -102,14 +102,6 @@ class AccessibilityManager {
       });
     });
   }
-
-  initGrowEffect() {
-    document.querySelectorAll('a, button, input, select, textarea, label').forEach(el => {
-      el.addEventListener('click', () => {
-        el.classList.add('nav-grow');
-      });
-    });
-  }
 }
 
 // Initialisation
