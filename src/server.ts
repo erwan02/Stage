@@ -25,13 +25,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/index', (_req, res) => {
+app.get('/', (_req, res) => {
     res.render('tableauDeBord', { title: "Tableau De Bord" });
 });
 
-app.get('/tableauDeBord', (_req, res) => {
-    res.render('tableauDeBord', { title: "Tableau De Bord" });
-});
+// app.get('/tableauDeBord', (_req, res) => {
+//     res.render('tableauDeBord', { title: "Tableau De Bord" });
+// });
 
 app.get('/creeAtelier', (_req, res) => {
     res.render('creeAtelier', { title: "Créer un atelier" });
@@ -64,5 +64,5 @@ app.get('/adminArticle',(_req, res)=>{
 
 
 app.listen(port, () => {
-    console.log(`T'inquiete le serveur a bien demarré : http://localhost:${port}/index`);
+    console.log(`T'inquiete le serveur a bien demarré : http://localhost:${port}`);
 });
