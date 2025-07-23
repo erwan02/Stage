@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/adminAtelierGestion.css"/>
+    <link rel="icon" href="/images/Logo1.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/nav-bar') %>
+    <!-- <header>
+        <img src="/public/images/Logo1.png" alt="Logo du site">
+        <h1>Gestion des utilisateurs</h1>
+        <div class="Boutonorange">
+            <button class="font-btn" onclick="increaseFontSize()" title="Augmenter la taille du texte">A+</button>
+            <button class="bouton">Profil</button>
+            <button class="boutonDeco">Déconnexion</button>
+        </div>
+    </header> -->
+
+    <!-- <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Actualités</a></li>
+            <li><a href="#">Ateliers</a></li>
+            <li><a href="#">Historique</a></li>
+            <li><a class="active" href="#">Gestion utilisateurs</a></li>
+            <li><a href="#">Gestion ateliers</a></li>
+            <li><a href="#">Créer un atelier</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Tableau de bord</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <div class="enTeteUsers">
+        <div class="ensembleRecherche">
+            <div class="rechercherPar">Rechercher par</div>
+            <input type="text" id="recherche" placeholder="Rechercher..."></textarea>
+            <img class="loupe" src="/public/images/loupe.png" alt="Image d'une loupe">
+        </div>
+    </div>
+
+    <div class="listeUsers">
+        <div class="rangeeUser">
+            <div class="infoAtelier">
+                <div class="dataUser">Titre de l'atelier</div>
+                <div class="dataUser">Date et lieu ou lien</div>
+                <div class="dataUser">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+        
+        <div class="rangeeUser">
+            <div class="infoAtelier">
+                <div class="dataUser">Titre de l'atelier</div>
+                <div class="dataUser">Date et lieu ou lien</div>
+                <div class="dataUser">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+        
+        <div class="rangeeUser">
+            <div class="infoAtelier">
+                <div class="dataUser">Titre de l'atelier</div>
+                <div class="dataUser">Date et lieu ou lien</div>
+                <div class="dataUser">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+        
+        <div class="rangeeUser">
+            <div class="infoAtelier">
+                <div class="dataUser">Titre de l'atelier</div>
+                <div class="dataUser">Date et lieu ou lien</div>
+                <div class="dataUser">Description :</div>
+            </div>
+            <div class="boutonsActions">
+                <button class="boutonEditer">Editer</button>
+                <button class="boutonParticipants">Participants</button>
+                <button class="boutonSupprimer">Desactiver</button>
+            </div>
+        </div>   
+    </div>
+    <%- include('partials/footer') %>
+    <!-- <script src=""></script> -->
+</body>
+</html>
