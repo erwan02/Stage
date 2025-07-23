@@ -30,7 +30,7 @@ app.get('/publicationArticle', (_req, res) => {
     res.render('publicationArticle', { title: "Publication d'article" });
 });
 app.get('/newsletterPage', (_req, res) => {
-    res.render('newsletter-page', { title: "Envoi de la newsletter" });
+    res.render('newsletterPage', { title: "Envoi de la newsletter" });
 });
 app.get('/adminUserGestion', (_req, res) => {
     res.render('adminUserGestion', { title: "Gestion des utilisateurs" });
