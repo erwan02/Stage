@@ -12,20 +12,7 @@ body {
   min-height: 100vh;
 }
 
-header {
-  background-color: #ffffffcc;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #e5e7eb;
-}
-
-header h1 {
-  font-size: 24px;
-  font-weight: 700;
-}
+/* SUPPRIMÉ : Les styles header et nav qui entraient en conflit avec headerNav.css */
 
 .Boutonorange .bouton {
   margin-left: 10px;
@@ -37,49 +24,12 @@ header h1 {
   cursor: pointer;
   font-weight: 600;
   transition: background 0.3s, transform 0.2s;
-    font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .Boutonorange .bouton:hover {
   background-color: #F0A30A;
   transform: translateY(-2px);
-}
-
-
-nav {
-  background-color: #ffffffcc;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #e5e7eb;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 10px 0;
-}
-
-nav ul li {
-  margin: 5px 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #374151;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #e5e7eb;
-}
-
-nav ul li a.active {
-  background-color: #3b82f6;
-  color: white;
 }
 
 .zoom-controls {
@@ -92,18 +42,17 @@ nav ul li a.active {
 .zoom-controls .bouton {
   padding: 8px 14px;
   border: none;
-  background-color: var(--accent-color);
-  color: var(--text-color);
+  background-color: #ffb700;
+  color: #1f2937;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  font-family: var(--font-main);
+  font-family: 'Inter', sans-serif;
   transition: background 0.3s, transform 0.2s;
-    background-color: #ffb700;
 }
 
 .zoom-controls .bouton:hover {
-  background-color: #ffb700;
+  background-color: #F0A30A;
   transform: translateY(-2px);
 }
 
