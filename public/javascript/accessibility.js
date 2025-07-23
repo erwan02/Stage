@@ -102,6 +102,7 @@ class AccessibilityManager {
       });
     });
   }
+}
 
 // Initialisation
 window.AccessibilityManager = new AccessibilityManager();
