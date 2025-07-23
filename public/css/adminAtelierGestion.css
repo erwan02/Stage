@@ -12,8 +12,32 @@ body {
   min-height: 100vh;
   overflow-x: hidden; /* Évite le débordement horizontal */
 }
+header {
+  background-color: #ffffffcc;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
 
-.enTeteUsers {
+header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  flex-grow: 1;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.enteteAtelier {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr auto;
   align-items: center;
@@ -23,13 +47,13 @@ body {
   max-width: 100%;
 }
 
-.enTeteUsers .label {
+.enteteAtelier .label {
   font-weight: bold;
   color: #374151;
   font-size: 16px;
 }
 
-.enTeteUsers .ensembleRecherche {
+.enteteAtelier .ensembleRecherche {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -40,7 +64,7 @@ body {
   justify-self: end;
 }
 
-.enTeteUsers #recherche {
+.enteteAtelier #recherche {
   width: 200px;
   height: 35px;
   padding: 8px 12px;
@@ -52,7 +76,7 @@ body {
   max-width: 100%;
 }
 
-.enTeteUsers #recherche:focus {
+.enteteAtelier #recherche:focus {
   border-color: #3b82f6;
 }
 
@@ -69,13 +93,17 @@ body {
   opacity: 1;
 }
 
-.listeUsers {
+.listeAtelier {
   padding: 0 20px;
   width: 100%;
   max-width: 100%;
 }
 
-.rangeeUser {
+.imgAtelier {
+  width: 150px;
+}
+
+.rangeeAtelier {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -91,13 +119,13 @@ body {
   overflow: hidden;
 }
 
-.rangeeUser:hover {
+.rangeeAtelier:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Conteneur pour les informations de l'atelier */
-.rangeeUser .infoAtelier {
+.rangeeAtelier .infoAtelier {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -105,14 +133,14 @@ body {
 }
 
 /* Conteneur pour les boutons */
-.rangeeUser .boutonsActions {
+.rangeeAtelier .boutonsActions {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex-shrink: 0;
 }
 
-.rangeeUser .dataUser {
+.rangeeAtelier .dataAtelier {
   font-weight: 500;
   color: #374151;
   word-break: break-word;
@@ -120,7 +148,7 @@ body {
   min-width: 0; /* Permet le retour à la ligne */
 }
 
-.rangeeUser .boutonSupprimer {
+.rangeeAtelier .boutonSupprimer {
   padding: 8px 16px;
   border: none;
   background-color: #ef4444;
@@ -134,12 +162,12 @@ body {
   min-width: 100px;
 }
 
-.rangeeUser .boutonSupprimer:hover {
+.rangeeAtelier .boutonSupprimer:hover {
   background-color: #dc2626;
   transform: translateY(-2px);
 }
 
-.rangeeUser .boutonEditer {
+.rangeeAtelier .boutonEditer {
   padding: 8px 16px;
   border: none;
   background-color: #3b82f6;
@@ -153,12 +181,12 @@ body {
   min-width: 100px;
 }
 
-.rangeeUser .boutonEditer:hover {
+.rangeeAtelier .boutonEditer:hover {
   background-color: #2563eb;
   transform: translateY(-2px);
 }
 
-.rangeeUser .boutonParticipants {
+.rangeeAtelier .boutonParticipants {
   padding: 8px 16px;
   border: none;
   background-color: #3b82f6;
@@ -172,7 +200,7 @@ body {
   min-width: 100px;
 }
 
-.rangeeUser .boutonParticipants:hover {
+.rangeeAtelier .boutonParticipants:hover {
   background-color: #2563eb;
   transform: translateY(-2px);
 }
@@ -191,12 +219,12 @@ body {
     padding: 15px 20px;
   }
 
-  .rangeeUser {
+  .rangeeAtelier {
     gap: 15px;
     padding: 15px;
   }
   
-  .listeUsers {
+  .listeAtelier {
     padding: 0 15px;
   }
 }
@@ -208,13 +236,13 @@ body {
     text-align: center;
   }
 
-  .listeUsers {
+  .listeAtelier {
     padding: 0 10px;
     width: calc(100% - 20px);
     margin: 0 auto;
   }
   
-  .rangeeUser {
+  .rangeeAtelier {
     flex-direction: column;
     gap: 15px;
     text-align: left;
@@ -224,24 +252,24 @@ body {
     margin: 10px 0;
   }
   
-  .rangeeUser .infoAtelier {
+  .rangeeAtelier .infoAtelier {
     width: 100%;
   }
   
-  .rangeeUser .boutonsActions {
+  .rangeeAtelier .boutonsActions {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
   }
   
-  .rangeeUser .dataUser {
+  .rangeeAtelier .dataAtelier {
     padding: 8px 0;
     border-bottom: 1px solid #e5e7eb;
     width: 100%;
     position: relative;
   }
   
-  .rangeeUser .dataUser:before {
+  /* .rangeeAtelier .dataAtelier:before {
     content: attr(data-label);
     font-weight: bold;
     color: #6b7280;
@@ -249,13 +277,13 @@ body {
     width: 80px;
     margin-right: 10px;
     flex-shrink: 0;
-  }
+  } */
   
-  .rangeeUser .dataUser:nth-child(1):before { content: "Titre: "; }
-  .rangeeUser .dataUser:nth-child(2):before { content: "Date/Lieu: "; }
-  .rangeeUser .dataUser:nth-child(3):before { content: "Description: "; }
-  .rangeeUser .dataUser:nth-child(4):before { content: "Membres: "; }
-}
+  /* .rangeeAtelier .dataAtelier:nth-child(1):before { content: "Titre: "; }
+  .rangeeAtelier .dataAtelier:nth-child(2):before { content: "Date/Lieu: "; }
+  .rangeeAtelier .dataAtelier:nth-child(3):before { content: "Description: "; }
+  .rangeeAtelier .dataAtelier:nth-child(4):before { content: "Membres: "; }*/
+} 
 
 /* Smartphones */
 @media (max-width: 480px) {
@@ -263,30 +291,30 @@ body {
     padding: 0;
   }
 
-  .enTeteUsers {
+  .enteteAtelier {
     padding: 10px;
     width: 100%;
   }
 
-  .listeUsers {
+  .listeAtelier {
     padding: 0 5px;
     width: calc(100% - 10px);
   }
   
-  .rangeeUser {
+  .rangeeAtelier {
     margin: 10px 0;
     padding: 15px;
     width: 100%;
   }
   
-  .rangeeUser .boutonsActions {
+  .rangeeAtelier .boutonsActions {
     flex-direction: column;
     gap: 8px;
   }
   
-  .rangeeUser .boutonEditer,
-  .rangeeUser .boutonParticipants,
-  .rangeeUser .boutonSupprimer {
+  .rangeeAtelier .boutonEditer,
+  .rangeeAtelier .boutonParticipants,
+  .rangeeAtelier .boutonSupprimer {
     width: 100%;
     min-width: auto;
   }
@@ -294,11 +322,11 @@ body {
 
 /* Très petits écrans */
 @media (max-width: 320px) {
-  .rangeeUser {
+  .rangeeAtelier {
     padding: 10px;
   }
   
-  .rangeeUser .dataUser:before {
+  .rangeeAtelier .dataAtelier:before {
     width: 70px;
     font-size: 14px;
   }
