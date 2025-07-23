@@ -18,9 +18,18 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.get('/index', (_req, res) => {
-    res.render('index', { message: "Welcome les copains, bienvenue à la page d'accueil" });
+    res.render('tableauDeBord', { title: "Tableau De Bord" });
 });
-app.get('/newsletter-page', (_req, res) => {
+app.get('/tableauDeBord', (_req, res) => {
+    res.render('tableauDeBord', { title: "Tableau De Bord" });
+});
+app.get('/creeAtelier', (_req, res) => {
+    res.render('creeAtelier', { title: "Créer un atelier" });
+});
+app.get('/publicationArticle', (_req, res) => {
+    res.render('publicationArticle', { title: "Publication d'article" });
+});
+app.get('/newsletterPage', (_req, res) => {
     res.render('newsletter-page', { title: "Envoi de la newsletter" });
 });
 app.get('/adminUserGestion', (_req, res) => {
@@ -29,11 +38,10 @@ app.get('/adminUserGestion', (_req, res) => {
 app.get('/adminAtelierGestion', (_req, res) => {
     res.render('adminAtelierGestion', { title: "Gestion des ateliers" });
 });
-// Route pour la page adminModifAtelier
 app.get('/adminModifAtelier', (_req, res) => {
     res.render('adminModifAtelier', { title: "Modification d'atelier" });
 });
-app.get('/admin-article', (_req, res) => {
+app.get('/adminArticle', (_req, res) => {
     res.render('admin-article', { title: "Publication d'article" });
 });
 app.listen(port, () => {
