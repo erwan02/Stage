@@ -147,7 +147,7 @@ img{
 .accessibility-toggle {
     background: #4CAF50 !important;
     border: 2px solid #000 !important;
-    border-radius: 50% !important;
+    border-radius: 5px !important;
     width: 40px !important;
     height: 40px !important;
     display: flex !important;
