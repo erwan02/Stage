@@ -1,108 +1,116 @@
-// ====== CONFIG ======
-const DEFAULT_FONT_SIZE = 100; // %
-const MIN_FONT = 70;
-const MAX_FONT = 300;
 
-// ====== ELEMENTS ======
-const ROOT = document.documentElement;
-const body = document.body;
+class AccessibilityManager {
+  constructor() {
+    // Config
+    this.DEFAULT_FONT_SIZE = 100;
+    this.MIN_FONT = 70;
+    this.MAX_FONT = 300;
 
-const zoomInBtn = document.getElementById('zoomIn');
-const zoomOutBtn = document.getElementById('zoomOut');
-const zoomResetBtn = document.getElementById('zoomReset');
+    // Elements
+    this.ROOT = document.documentElement;
+    this.body = document.body;
+    this.zoomInBtn = document.getElementById('zoomIn');
+    this.zoomOutBtn = document.getElementById('zoomOut');
+    this.zoomResetBtn = document.getElementById('zoomReset');
+    this.accessibilityToggle = document.getElementById('accessibilityToggle');
+    this.announcements = document.getElementById('announcements');
 
-const accessibilityToggle = document.getElementById('accessibilityToggle');
-const announcements = document.getElementById('announcements');
+    // State
+    this.currentFontSize = parseInt(localStorage.getItem('fontSizePercent') || this.DEFAULT_FONT_SIZE, 10);
+    this.ROOT.style.fontSize = this.currentFontSize + '%';
 
-// ====== STATE INIT ======
-let currentFontSize = parseInt(localStorage.getItem('fontSizePercent') || DEFAULT_FONT_SIZE, 10);
-ROOT.style.fontSize = currentFontSize + '%';
+    const isAccessibilityMode = JSON.parse(localStorage.getItem('accessibilityMode') || 'false');
+    if (isAccessibilityMode) this.enableAccessibilityMode();
 
-const isAccessibilityMode = JSON.parse(localStorage.getItem('accessibilityMode') || 'false');
-if (isAccessibilityMode) enableAccessibilityMode();
-
-// ====== EVENTS ======
-zoomInBtn?.addEventListener('click', () => changeFontSize(10));
-zoomOutBtn?.addEventListener('click', () => changeFontSize(-10));
-zoomResetBtn?.addEventListener('click', resetFontSize);
-
-accessibilityToggle?.addEventListener('click', () => {
-  body.classList.contains('accessibility-mode') ? disableAccessibilityMode() : enableAccessibilityMode();
-});
-
-// Raccourcis clavier: Alt + = / Alt + - / Alt + 0 / Alt + A
-document.addEventListener('keydown', (e) => {
-  if (!e.altKey) return;
-
-  switch (e.key) {
-    case '+':
-    case '=':
-      e.preventDefault(); changeFontSize(10); break;
-    case '-':
-      e.preventDefault(); changeFontSize(-10); break;
-    case '0':
-      e.preventDefault(); resetFontSize(); break;
-    case 'a':
-    case 'A':
-      e.preventDefault();
-      accessibilityToggle?.click();
-      break;
-    default:
-      break;
+    // Events
+    this.initEvents();
+    this.initLogoClick();
+    this.initGrowEffect();
   }
-});
 
-// ====== FUNCTIONS ======
-function changeFontSize(delta) {
-  currentFontSize = clamp(currentFontSize + delta, MIN_FONT, MAX_FONT);
-  ROOT.style.fontSize = currentFontSize + '%';
-  localStorage.setItem('fontSizePercent', currentFontSize);
-  announce(`Taille du texte ${currentFontSize}%`);
+  initEvents() {
+    this.zoomInBtn?.addEventListener('click', () => this.changeFontSize(10));
+    this.zoomOutBtn?.addEventListener('click', () => this.changeFontSize(-10));
+    this.zoomResetBtn?.addEventListener('click', () => this.resetFontSize());
+
+    this.accessibilityToggle?.addEventListener('click', () => {
+      this.body.classList.contains('accessibility-mode') ? this.disableAccessibilityMode() : this.enableAccessibilityMode();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!e.altKey) return;
+      switch (e.key) {
+        case '+':
+        case '=':
+          e.preventDefault(); this.changeFontSize(10); break;
+        case '-':
+          e.preventDefault(); this.changeFontSize(-10); break;
+        case '0':
+          e.preventDefault(); this.resetFontSize(); break;
+        case 'a':
+        case 'A':
+          e.preventDefault(); this.accessibilityToggle?.click(); break;
+        default:
+          break;
+      }
+    });
+  }
+
+  changeFontSize(delta) {
+    this.currentFontSize = this.clamp(this.currentFontSize + delta, this.MIN_FONT, this.MAX_FONT);
+    this.ROOT.style.fontSize = this.currentFontSize + '%';
+    localStorage.setItem('fontSizePercent', this.currentFontSize);
+    this.announce(`Taille du texte ${this.currentFontSize}%`);
+  }
+
+  resetFontSize() {
+    this.currentFontSize = this.DEFAULT_FONT_SIZE;
+    this.ROOT.style.fontSize = this.currentFontSize + '%';
+    localStorage.setItem('fontSizePercent', this.currentFontSize);
+    this.announce('Taille du texte réinitialisée');
+  }
+
+  enableAccessibilityMode() {
+    this.body.classList.add('accessibility-mode');
+    this.accessibilityToggle?.classList.add('active');
+    this.accessibilityToggle?.setAttribute('aria-pressed', 'true');
+    localStorage.setItem('accessibilityMode', 'true');
+    this.announce('Mode accessibilité activé.');
+  }
+
+  disableAccessibilityMode() {
+    this.body.classList.remove('accessibility-mode');
+    this.accessibilityToggle?.classList.remove('active');
+    this.accessibilityToggle?.setAttribute('aria-pressed', 'false');
+    localStorage.setItem('accessibilityMode', 'false');
+    this.announce('Mode accessibilité désactivé.');
+  }
+
+  announce(message) {
+    if (this.announcements) this.announcements.textContent = message;
+  }
+
+  clamp(val, min, max) {
+    return Math.min(max, Math.max(min, val));
+  }
+
+  initLogoClick() {
+    document.querySelectorAll('.logo').forEach(logo => {
+      logo.style.cursor = 'pointer';
+      logo.addEventListener('click', () => {
+        window.location.href = '/index';
+      });
+    });
+  }
+
+  initGrowEffect() {
+    document.querySelectorAll('a, button, input, select, textarea, label').forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.add('nav-grow');
+      });
+    });
+  }
 }
 
-function resetFontSize() {
-  currentFontSize = DEFAULT_FONT_SIZE;
-  ROOT.style.fontSize = currentFontSize + '%';
-  localStorage.setItem('fontSizePercent', currentFontSize);
-  announce('Taille du texte réinitialisée');
-}
-
-function enableAccessibilityMode() {
-  body.classList.add('accessibility-mode');
-  accessibilityToggle?.classList.add('active');
-  accessibilityToggle?.setAttribute('aria-pressed', 'true');
-  localStorage.setItem('accessibilityMode', 'true');
-  announce('Mode accessibilité activé.');
-}
-
-function disableAccessibilityMode() {
-  body.classList.remove('accessibility-mode');
-  accessibilityToggle?.classList.remove('active');
-  accessibilityToggle?.setAttribute('aria-pressed', 'false');
-  localStorage.setItem('accessibilityMode', 'false');
-  announce('Mode accessibilité désactivé.');
-}
-
-function announce(message) {
-  if (announcements) announcements.textContent = message;
-}
-
-function clamp(val, min, max) {
-  return Math.min(max, Math.max(min, val));
-}
-
-// Redirection vers /index quand on clique sur le logo
-document.querySelectorAll('.logo').forEach(logo => {
-  logo.style.cursor = 'pointer';
-  logo.addEventListener('click', () => {
-    window.location.href = '/index';
-  });
-});
-
-
-// Effet d'accessibilité : agrandit tous les éléments interactifs lors du clic (effet permanent)
-document.querySelectorAll('a, button, input, select, textarea, label').forEach(el => {
-  el.addEventListener('click', () => {
-    el.classList.add('nav-grow');
-  });
-});
+// Initialisation
+window.AccessibilityManager = new AccessibilityManager();
