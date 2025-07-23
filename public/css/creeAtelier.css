@@ -82,6 +82,31 @@ nav ul li a.active {
   color: white;
 }
 
+.zoom-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.zoom-controls .bouton {
+  padding: 8px 14px;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-main);
+  transition: background 0.3s, transform 0.2s;
+    background-color: #ffb700;
+}
+
+.zoom-controls .bouton:hover {
+  background-color: #ffb700;
+  transform: translateY(-2px);
+}
+
 main {
   padding: 40px 20px;
   display: flex;
