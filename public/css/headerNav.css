@@ -22,51 +22,6 @@ body {
 }
 
 /* ===============================
-   MODE ACCESSIBILITÉ
-   =============================== */
-.accessibility-mode {
-    font-size: 22px !important;
-    line-height: 2 !important;
-}
-/*a voir si on a le temps pour agrandir mieux le main*/
-
-.accessibility-mode * {
-    outline: 2px solid transparent !important;
-    outline-offset: 4px !important;
-}
-
-.accessibility-mode button,
-.accessibility-mode input,
-.accessibility-mode textarea,
-.accessibility-mode a {
-    border: 3px solid #000 !important;
-    font-size: 1.2em !important;
-    padding: 1em !important;
-    margin: 0.5em !important;
-}
-
-.accessibility-mode button:focus,
-.accessibility-mode input:focus,
-.accessibility-mode textarea:focus,
-.accessibility-mode a:focus {
-    outline: 4px solid #ff0000 !important;
-    transform: scale(1.1) !important;
-}
-
-.accessibility-mode button:hover,
-.accessibility-mode input:hover,
-.accessibility-mode textarea:hover,
-.accessibility-mode a:hover {
-    background: #ffff00 !important;
-    color: #000 !important;
-}
-
-/* Indicateur de focus visible */
-.accessibility-mode *:focus {
-    box-shadow: 0 0 0 4px #ff0000, 0 0 0 8px #ffffff !important;
-}
-
-/* ===============================
    HEADER
    =============================== */
 header {
@@ -74,6 +29,7 @@ header {
     color: #000;
     padding: 20px 40px;
     position: relative;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .header-container {
@@ -143,6 +99,7 @@ img{
    =============================== */
 nav {
     background: linear-gradient(90deg, #f2f2f2 0%, #e8ba8d 100%);
+    border-bottom: 1px solid #e5e7eb;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5110em;
