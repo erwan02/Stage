@@ -11,9 +11,10 @@ body {
   min-height: 100vh;
 }
 
-/* SUPPRIMÉ - Styles header conflictuels */
-/* header { ... } */
-/* header h1 { ... } */
+h2 {
+  font-size: 24px;
+  color: #082a9b;
+}
 
 .Boutonorange .bouton {
   margin-left: 10px;

@@ -52,10 +52,10 @@ main {
 }
 
 .Bloct1 h2 {
-  text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
+  color: #082a9b;
 }
 
 .Bloct1 label {
