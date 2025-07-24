@@ -15,6 +15,10 @@ body {
     /* Ecriture recommandée pour les malvoyants */
     line-height: 1.6;
     transition: all 0.3s ease;
+    /* Correction footer en bas de page */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===============================
@@ -111,8 +115,8 @@ img{
 
 .header-buttons button {
     padding: 0.4em 0.8em;
-    border-radius: 8px;
-    border: none;
+    border-radius: 3px;
+    border: none; /* SUPPRIMÉ : border: 1px solid #333; */
     background: #4db8ff;
     color: #fff;
     cursor: pointer;
@@ -170,43 +174,11 @@ nav a.active {
     color: white;
 }
 
-.enTeteUsers {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-
-.enTeteUsers .label {
-    font-weight: bold;
-    min-width: 14vw;
-    margin: 30px;
-    margin-bottom: 0;
-}
-
-.enTeteUsers textarea {
-    width: 200px;
-    padding: 0.5em;
-    margin: 20px;
-    margin-bottom: 0;
-    border: 2px solid #000;
-    border-radius: 5px;
-    resize: none;
-    min-height: 8vh;
-}
-
-.rangeeUser {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    margin: 10px;
-    padding: 20px;
-    background: #f4a300;
-    border-radius: 25px;
-    height: 70px;
-}
-
-.rangeeUser .dataUser {
-     min-width: 18vw;
+/* ===============================
+   MAIN - Prend l'espace restant
+   =============================== */
+main {
+    flex: 1;
 }
 
 .active {
