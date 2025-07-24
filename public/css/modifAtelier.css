@@ -26,12 +26,11 @@ form {
   margin: auto;
 }
 
-h1 {
+h2 {
   font-size: 28px;
   font-weight: 700;
   color: #082a9b;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 label {
