@@ -11,10 +11,6 @@ body {
   min-height: 100vh;
 }
 
-h2 {
-  font-size: 24px;
-  color: #082a9b;
-}
 
 .Boutonorange .bouton {
   margin-left: 10px;
@@ -33,14 +29,6 @@ h2 {
   transform: translateY(-2px);
 }
 
-/* SUPPRIMÉ - Styles nav conflictuels */
-/* nav { ... } */
-/* nav ul { ... } */
-/* nav ul li { ... } */
-/* nav ul li a { ... } */
-/* nav ul li a:hover { ... } */
-/* nav ul li a.active { ... } */
-
 
 
 main {
@@ -56,6 +44,11 @@ main {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   max-width: 700px;
   width: 100%;
+}
+
+h2{
+  padding-bottom: 23px;
+  color:#082a9b;
 }
 
 .Article {

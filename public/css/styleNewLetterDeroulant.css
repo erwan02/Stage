@@ -222,29 +222,6 @@ select:focus {
 }
 
 /* =============================== 
-   FOOTER 
-   =============================== */
-footer {
-  background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%);
-  color: #fff;
-  text-align: center;
-  padding: 32px 0;
-  width: 100%;
-  margin-top: 0;
-  flex-shrink: 0;
-}
-
-footer p {
-  font-size: 1.1em;
-  font-family: 'Inter', sans-serif;
-}
-
-.accessibility-mode footer p {
-  font-size: 1.3em !important;
-  font-weight: bold;
-}
-
-/* =============================== 
    ACCESSIBILITÉ 
    =============================== */
 .sr-only {
