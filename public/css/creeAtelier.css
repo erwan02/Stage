@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  /* SUPPRIMÉ : font-size: 16px; - Laisse le HTML gérer la taille de base */
   background: linear-gradient(to bottom right, #dbeafe, #3b82f6);
   color: #1f2937;
   line-height: 1.6;
@@ -32,7 +32,6 @@ body {
   background-color: #F0A30A;
   transform: translateY(-2px);
 }
-
 
 main {
   padding: 40px 20px;
