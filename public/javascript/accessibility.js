@@ -1,6 +1,6 @@
-class SimpleZoom {
+class Zoom {
   constructor() {
-    this.niveauDeZoom = [100, 120, 140]; // Normal, Moyen, Grand
+    this.niveauDeZoom = [100, 120, 140]; // Normal moyen et grand
     this.indexNiveauZoom = 0; // Index du niveau actuel
     
     this.init();
@@ -28,5 +28,5 @@ class SimpleZoom {
 
 // Initialise au chargenent de page
 document.addEventListener('DOMContentLoaded', function() {
-  new SimpleZoom();
+  new Zoom();
 });
