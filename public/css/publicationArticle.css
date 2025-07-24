@@ -101,3 +101,39 @@ main {
   background-color: #2563eb;
   transform: translateY(-2px);
 }
+
+
+.drop-zone {
+  border: 2px dashed #9ca3af;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.drop-zone:hover {
+  border-color: #6b7280;
+}
+
+.drop-zone img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.drop-zone p {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  color: #4b5563;
+}
+
+.drop-zone a {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.drop-zone a:hover {
+  text-decoration: underline;
+}
