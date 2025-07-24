@@ -29,7 +29,6 @@ header {
     color: #000;
     padding: 20px 40px;
     position: relative;
-    border-bottom: 1px solid #e5e7eb;
 }
 
 .header-container {
@@ -99,7 +98,6 @@ img{
    =============================== */
 nav {
     background: linear-gradient(90deg, #f2f2f2 0%, #e8ba8d 100%);
-    border-bottom: 1px solid #e5e7eb;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5110em;
