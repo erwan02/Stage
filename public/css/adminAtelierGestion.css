@@ -52,7 +52,29 @@ header img {
   justify-self: end;
 }
 
-.enteteAtelier #recherche {
+.enteteAtelier #rechercheTitre {
+  width: 200px;
+  height: 35px;
+  padding: 8px 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  max-width: 100%;
+}
+.enteteAtelier #rechercheDate {
+  width: 200px;
+  height: 35px;
+  padding: 8px 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  max-width: 100%;
+}
+.enteteAtelier #rechercheLieu {
   width: 200px;
   height: 35px;
   padding: 8px 12px;
