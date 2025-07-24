@@ -1,112 +1,83 @@
 body {
-    font-family: Arial, Verdana, Helvetica;
-    background: #f9f9f9;
-    margin: 0;
-    padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #dbeafe, #3b82f6);
+  color: #1f2937;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #f4a300;
-    border-radius: 18px;
-    box-shadow: 0 0 12px #ccc;
-    padding: 32px 36px 24px 36px;
-}
-
-h1 {
-    font-size: 1.5em;
-    color: #000;
-    margin-bottom: 1.2em;
-    text-align: left;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  margin: auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #082a9b;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 label {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.3em;
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 input[type="text"],
 input[type="file"],
 textarea {
-    width: 100%;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    background: #fff;
-}
-
-input[type="file"] {
-    background: #fff;
-    border: none;
-    padding: 0.2em 0.5em;
-}
-
-textarea {
-    min-height: 120px;
-    resize: vertical;
-    font-family: Arial, Verdana, Helvetica;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
 }
 
 .buttons {
-    display: flex;
-    gap: 1em;
-    justify-content: flex-end;
-    margin-top: 1.5em;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.submit-btn {
-    background: #4db8ff;
-    color: #fff;
-    border: 1px solid #0074d9;
-    border-radius: 4px;
-    padding: 0.7em 1.5em;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.submit-btn:hover {
-    background: #3399ff;
-}
-
+.submit-btn,
 .cancel-btn {
-    background: #ff4444;
-    color: #fff;
-    border: 1px solid #c00;
-    border-radius: 4px;
-    padding: 0.7em 1.5em;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.2s;
+  background-color: #F0A30A;
+  color: #1f2937;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  transition: background 0.3s, transform 0.2s;
 }
+
+.submit-btn:hover,
 .cancel-btn:hover {
-    background: #ff3333;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-.live-region {
-    position: absolute;
-    left: -10000px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  background-color: #F0A30A;
+  transform: translateY(-2px);
 }
