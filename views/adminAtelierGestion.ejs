@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/adminAtelierGestion.css"/>
+    <link rel="stylesheet" href="/css/modifAtelier.css"/>
     <link rel="icon" href="/images/logo1.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/headerNav.css">
@@ -14,84 +15,135 @@
     <%- include('partials/header') %>
     <%- include('partials/nav-bar') %>
    
+    <!-- Section de la liste des ateliers -->
+    <div id="listeSection">
+        <div class="enteteAtelier">
+            <div class="ensembleRecherche">
+                <div class="rechercherPar">Rechercher </div>
+                <input type="text" id="recherche" placeholder="par titre...">
+                <input type="text" id="recherche2" placeholder="par date...">
+                <input type="text" id="recherche3" placeholder="par lieu...">
+                <img class="loupe" src="/images/loupe.png" alt="Image d'une loupe">
+            </div>
+        </div>
 
-    <div class="enteteAtelier">
-        <div class="ensembleRecherche">
-            <div class="rechercherPar">Rechercher </div>
-            <input type="text" id="recherche" placeholder="par titre..."></textarea>
-            <input type="text" id="recherche" placeholder="par date..."></textarea>
-            <input type="text" id="recherche" placeholder="par lieu..."></textarea>
-            <img class="loupe" src="/images/loupe.png" alt="Image d'une loupe">
+        <div class="listeAtelier">
+            <div class="rangeeAtelier">
+                <div class="infoAtelier">
+                    <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                    <div class="dataContainer">
+                        <div class="dataAtelier">Titre : Atelier de cuisine</div>
+                        <div class="dataAtelier">Date et lieu : 15/02/2025 - Salle A</div>
+                        <div class="dataAtelier">Description : Un atelier pour apprendre les bases de la cuisine</div>
+                    </div>
+                </div>
+                <div class="boutonsActions">
+                    <button class="boutonEditer" onclick="afficherFormulaireModification(this)">Editer</button>
+                    <button class="boutonParticipants">Participants</button>
+                    <button class="boutonSupprimer">Desactiver</button>
+                </div>
+            </div>   
+            
+            <div class="rangeeAtelier">
+                <div class="infoAtelier">
+                    <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                    <div class="dataContainer">
+                        <div class="dataAtelier">Titre : Atelier de peinture</div>
+                        <div class="dataAtelier">Date et lieu : 20/02/2025 - Salle B</div>
+                        <div class="dataAtelier">Description : Découvrez les techniques de peinture à l'huile</div>
+                    </div>
+                </div>
+                <div class="boutonsActions">
+                    <button class="boutonEditer" onclick="afficherFormulaireModification(this)">Editer</button>
+                    <button class="boutonParticipants">Participants</button>
+                    <button class="boutonSupprimer">Desactiver</button>
+                </div>
+            </div>   
+            
+            <div class="rangeeAtelier">
+                <div class="infoAtelier">
+                    <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                    <div class="dataContainer">
+                        <div class="dataAtelier">Titre : Atelier de jardinage</div>
+                        <div class="dataAtelier">Date et lieu : 25/02/2025 - Extérieur</div>
+                        <div class="dataAtelier">Description : Apprenez à cultiver vos propres légumes</div>
+                    </div>
+                </div>
+                <div class="boutonsActions">
+                    <button class="boutonEditer" onclick="afficherFormulaireModification(this)">Editer</button>
+                    <button class="boutonParticipants">Participants</button>
+                    <button class="boutonSupprimer">Desactiver</button>
+                </div>
+            </div>   
+            
+            <div class="rangeeAtelier">
+                <div class="infoAtelier">
+                    <img class="imgAtelier" src="/images/atelierEx.png" alt="">
+                    <div class="dataContainer">
+                        <div class="dataAtelier">Titre : Atelier de photographie</div>
+                        <div class="dataAtelier">Date et lieu : 01/03/2025 - Studio</div>
+                        <div class="dataAtelier">Description : Maîtrisez les bases de la photographie numérique</div>
+                    </div>
+                </div>
+                <div class="boutonsActions">
+                    <button class="boutonEditer" onclick="afficherFormulaireModification(this)">Editer</button>
+                    <button class="boutonParticipants">Participants</button>
+                    <button class="boutonSupprimer">Desactiver</button>
+                </div>
+            </div>   
         </div>
     </div>
 
-    <div class="listeAtelier">
-        <div class="rangeeAtelier">
-            <div class="infoAtelier">
-                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
-                <div class="dataContainer">
-                    <div class="dataAtelier">Titre :</div>
-                    <div class="dataAtelier">Date et lieu</div>
-                    <div class="dataAtelier">Description :</div>
+    <!-- Section du formulaire de modification (cachée par défaut) -->
+    <div id="modificationSection" style="display: none;">
+        <main style="padding: 40px 20px; display: flex; justify-content: center;">
+            <form aria-labelledby="form-title" novalidate>
+                <h2 id="form-title">Modification d'atelier</h2>
+                <label for="titre">Titre de l'atelier <span aria-label="obligatoire">*</span>:</label>
+                <input type="text" id="titre" name="titre" aria-required="true" aria-describedby="titre-error" />
+                <div id="titre-error" role="alert" aria-live="polite"></div>
+                
+                <label for="date">Date et heure :</label>
+                <input type="text" id="date" name="date" aria-required="true" aria-describedby="date-error" />
+                <div id="date-error" role="alert" aria-live="polite"></div>
+                
+                <label for="lieu">Lieu/Lien :</label>
+                <input type="text" id="lieu" name="lieu" aria-required="true" aria-describedby="lieu-error" />
+                <div id="lieu-error" role="alert" aria-live="polite"></div>
+                
+                <label for="image">Image :</label>
+                <input type="text" id="image" name="image" aria-describedby="image-help" />
+                <input type="file" id="imageFile" name="imageFile" accept="image/*" aria-describedby="image-help" />
+                <div id="image-help" class="sr-only">Sélectionnez une image au format JPG, PNG ou GIF</div>
+                
+                <label for="description">Description :</label>
+                <textarea id="description" name="description" aria-required="true" aria-describedby="description-error description-help"></textarea>
+                <div id="description-help">
+                    Rédigez la description de l'atelier ici
                 </div>
-            </div>
-            <div class="boutonsActions">
-                <button class="boutonEditer">Editer</button>
-                <button class="boutonParticipants">Participants</button>
-                <button class="boutonSupprimer">Desactiver</button>
-            </div>
-        </div>   
-        
-        <div class="rangeeAtelier">
-            <div class="infoAtelier">
-                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
-                <div class="dataContainer">
-                    <div class="dataAtelier">Titre :</div>
-                    <div class="dataAtelier">Date et lieu</div>
-                    <div class="dataAtelier">Description :</div>
+                <div id="description-error" role="alert" aria-live="polite"></div>
+                
+                <label for="places">Nombre de place :</label>
+                <input type="text" id="places" name="places" aria-required="true" aria-describedby="places-error" />
+                <div id="places-error" role="alert" aria-live="polite"></div>
+                
+                <div class="buttons">
+                    <button type="submit" class="submit-btn" aria-describedby="submit-help">
+                        Enregistrer modification
+                    </button>
+                    <button type="button" class="cancel-btn" aria-describedby="cancel-help" onclick="retournerListe()">
+                        Annuler
+                    </button>
                 </div>
-            </div>
-            <div class="boutonsActions">
-                <button class="boutonEditer">Editer</button>
-                <button class="boutonParticipants">Participants</button>
-                <button class="boutonSupprimer">Desactiver</button>
-            </div>
-        </div>   
-        
-        <div class="rangeeAtelier">
-            <div class="infoAtelier">
-                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
-                <div class="dataContainer">
-                    <div class="dataAtelier">Titre :</div>
-                    <div class="dataAtelier">Date et lieu</div>
-                    <div class="dataAtelier">Description :</div>
-                </div>
-            </div>
-            <div class="boutonsActions">
-                <button class="boutonEditer">Editer</button>
-                <button class="boutonParticipants"">Participants</button>
-                <button class="boutonSupprimer">Desactiver</button>
-            </div>
-        </div>   
-        
-        <div class="rangeeAtelier">
-            <div class="infoAtelier">
-                <img class="imgAtelier" src="/images/atelierEx.png" alt="">
-                <div class="dataContainer">
-                    <div class="dataAtelier">Titre :</div>
-                    <div class="dataAtelier">Date et lieu</div>
-                    <div class="dataAtelier">Description :</div>
-                </div>
-            </div>
-            <div class="boutonsActions">
-                <button class="boutonEditer">Editer</button>
-                <button class="boutonParticipants">Participants</button>
-                <button class="boutonSupprimer">Desactiver</button>
-            </div>
-        </div>   
+                <div id="submit-help" class="sr-only">Enregistrer les modifications de l'atelier</div>
+                <div id="cancel-help" class="sr-only">Annuler toutes les modifications</div>
+            </form>
+        </main>
     </div>
+
     <%- include('partials/footer') %>
-  <script src="javascript/accessibility.js"></script>
-  <script src="javascript/participantsAteliers.js"></script>
+    <script src="javascript/accessibility.js"></script>
+    <script src="javascript/participantsAteliers.js"></script>
+    <script src="javascript/modifAteliers.js"></script>
 </body>
 </html>
