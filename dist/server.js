@@ -38,11 +38,8 @@ app.get('/adminUserGestion', (_req, res) => {
 app.get('/adminAtelierGestion', (_req, res) => {
     res.render('adminAtelierGestion', { title: "Gestion des ateliers" });
 });
-app.get('/adminModifAtelier', (_req, res) => {
-    res.render('adminModifAtelier', { title: "Modification d'atelier" });
-});
 app.get('/adminArticle', (_req, res) => {
-    res.render('admin-article', { title: "Publication d'article" });
+    res.render('adminArticle', { title: "Publication d'article" });
 });
 app.listen(port, () => {
     console.log(`T'inquiete le serveur a bien demarré : http://localhost:${port}`);
