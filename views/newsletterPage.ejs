@@ -20,18 +20,33 @@
             <label for="objet">Objet <span aria-label="obligatoire">*</span>:</label>
             <input type="text" id="objet" name="objet" aria-required="true" aria-describedby="objet-error" />
             <div id="objet-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
+            
+            <label for="fichier">Fichier à joindre :</label>
+<div class="upload-container">
+
+    <label class="drop-zone" for="fichier">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="upload icon">
+<a href="#" onclick="document.getElementById('fichier').click(); return false;">Choisis un fichier</a>
+    </label>
+    <input type="file" id="fichier" name="fichier" aria-describedby="fichier-help" accept="image/*,application/pdf" />
+</div>
+<div id="fichier-help" style="font-size: 0.9em; color: #000000; margin-top: 0.25em;">
+    Optionnel — Ajoutez un fichier à envoyer avec la newsletter (PDF, image, etc.)
+</div>
+            
+            
             <label for="modele">Modèle :</label>
             <select id="modele" name="modele" aria-describedby="modele-help">
                 <option value="">-- Aucun --</option>
                 <option value="modele1">Modèle 1 - Annonce d'évènement</option>
                 <option value="modele2">Modèle 2 - Résumé d'article</option>
             </select>
-            <div id="modele-help" style="font-size: 0.9em; color: #666; margin-top: 0.25em;">
+            <div id="modele-help" style="font-size: 0.9em; color: #000000; margin-top: 0.25em;">
                 Sélectionnez un modèle prédéfini ou laissez vide pour créer un contenu personnalisé
             </div>
             <label for="contenu">Contenu <span aria-label="obligatoire">*</span>:</label>
             <textarea id="contenu" name="contenu" aria-required="true" aria-describedby="contenu-error contenu-help" placeholder="Saisissez le contenu de votre newsletter..."></textarea>
-            <div id="contenu-help" style="font-size: 0.9em; color: #666; margin-top: 0.25em;">
+            <div id="contenu-help" style="font-size: 0.9em; color: #000000; margin-top: 0.25em;">
                 Rédigez le contenu de votre newsletter ici
             </div>
             <div id="contenu-error" role="alert" aria-live="polite" style="color: #c00; display: none;"></div>
