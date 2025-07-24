@@ -26,8 +26,8 @@ app.get('/', (_req, res) => {
 app.get('/creeAtelier', (_req, res) => {
     res.render('creeAtelier', { title: "Créer un atelier" });
 });
-app.get('/publicationArticle', (_req, res) => {
-    res.render('publicationArticle', { title: "Publication d'article" });
+app.get('/adminArticle', (_req, res) => {
+    res.render('adminArticle', { title: "Publication d'article" });
 });
 app.get('/newsletterPage', (_req, res) => {
     res.render('newsletterPage', { title: "Envoi de la newsletter" });

@@ -1,32 +1,32 @@
-// Classe Zoom : gère le zoom de l'interface pour l'accessibilité
 class Zoom {
   constructor() {
-    // Niveaux de zoom disponibles (en %)
-    this.niveaux = [100, 120, 140];
-    // Index du niveau de zoom actuel
-    this.index = 0;
-    // Initialisation du bouton d'accessibilité
+    this.niveauDeZoom = [100, 120, 140]; // Normal moyen et grand
+    this.indexNiveauZoom = 0; // Index du niveau actuel
+    
     this.init();
   }
-
-  // Initialise le bouton et l'événement
+  
   init() {
-    const bouton = document.getElementById('accessibilityToggle');
-    if (bouton) {
-      bouton.addEventListener('click', () => this.changerZoom());
+    const accessibilityButton = document.getElementById('accessibilityToggle');
+    
+    if (accessibilityButton) {
+      accessibilityButton.addEventListener('click', () => this.cycleZoom());
     }
   }
-
-  // Change le niveau de zoom à chaque clic
-  changerZoom() {
-    this.index = (this.index + 1) % this.niveaux.length;
-    const zoom = this.niveaux[this.index];
-    document.documentElement.style.fontSize = zoom + '%';
-    console.log(`Niveau de zoom : ${this.index + 1} - Taille : ${zoom}%`);
+  
+  cycleZoom() {
+    // Passer au 2eme zoom
+    this.indexNiveauZoom = (this.indexNiveauZoom + 1) % 3;
+    
+    // Appliquer zoom
+    const zoomValue = this.niveauDeZoom[this.indexNiveauZoom];
+    document.documentElement.style.fontSize = zoomValue + '%';
+    
+    console.log('Zoom niveau:', this.indexNiveauZoom + 1, '- Taille:', zoomValue + '%');
   }
 }
 
-// Instancie la classe Zoom au chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
+// Initialise au chargenent de page
+document.addEventListener('DOMContentLoaded', function() {
   new Zoom();
 });
