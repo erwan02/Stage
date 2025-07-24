@@ -1,10 +1,16 @@
 // --- Logique spécifique à la page newsletter ---
+const announcements = document.getElementById('announcements');
+function announce(message) {
+    if (announcements) {
+        announcements.textContent = message;
+    }
+}
 const modeleSelect = document.getElementById('modele');
 const contenuTextarea = document.getElementById('contenu');
 const form = document.querySelector('form');
 const objetInput = document.getElementById('objet');
 
-if (modeleSelect && contenuTextarea && announcements) {
+if (modeleSelect && contenuTextarea) {
     modeleSelect.addEventListener('change', function () {
         switch (this.value) {
             case 'modele1':
